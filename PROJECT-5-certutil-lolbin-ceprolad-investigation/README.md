@@ -179,7 +179,7 @@ let SuspiciousProcesses = DeviceProcessEvents
     by AccountName, FileName, InitiatingProcessFileName, ProcessCommandLine, DeviceName;
 let SuspiciousNetwork = DeviceNetworkEvents
 | where TimeGenerated >= ago(24h)
-| where InitiatingProcessFileName =~ "Powershell.exe"
+| where InitiatingProcessFileName =~ "certutil.exe"
 | where RemoteIPType != "Private"
 | project DeviceName, ActionType, RemoteUrl, RemotePort, RemoteIP, RemoteIPType, NetworkTime=TimeGenerated;
 SuspiciousProcesses
