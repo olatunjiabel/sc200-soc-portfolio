@@ -30,7 +30,8 @@ It documents my journey toward becoming a **SOC Analyst**, with a strong focus o
 - **Log Analytics Workspace**  
 - **Analytics Rules**  
 - **Azure Arc** (Hybrid Environment)  
-- **Windows Security Events & Sysmon**  
+- **Windows Security Events & Sysmon**
+- **Microsoft defender for endpoints**
 
 ---
 
@@ -175,6 +176,55 @@ I simulated real-world attacks using different Windows LOLBINs (Living-off-the-L
 
 ---
 
+## 🔹 Project 5: CertUtil LOLBin & Ceprolad Investigation
+
+This project focuses on detecting and investigating malicious activity involving **CertUtil (a Windows LOLBin)** and suspicious file execution behavior, including the use of a file named **“ceprolad”**, commonly associated with obfuscated or staged malware activity.
+
+---
+
+### 🧪 What I Did:
+- Simulated abuse of **CertUtil.exe** for malicious purposes (download, encode, decode operations)  
+- Investigated execution of suspicious file named **“ceprolad”** in command-line activity  
+- Generated Windows Security and Sysmon logs (Process Creation events)  
+- Built KQL queries to detect CertUtil-based LOLBin misuse  
+- Analyzed parent-child process relationships in Microsoft Sentinel  
+- Correlated command-line arguments with suspicious execution behavior  
+
+---
+
+### 🎯 Detection Logic Focus:
+- CertUtil usage with suspicious flags:
+  - `-urlcache`
+  - `-encode`
+  - `-decode`
+- Execution of unknown or non-standard file names (e.g. **ceprolad**)  
+- PowerShell or cmd spawning CertUtil processes  
+- Encoded or obfuscated command-line activity  
+- Abnormal process execution chains  
+
+---
+
+### 🔍 Key Findings:
+- CertUtil was used as a LOLBin to simulate file retrieval and encoding abuse  
+- Suspicious execution of **ceprolad** identified as potentially malicious or staged payload  
+- Encoded command-line activity made direct interpretation difficult  
+- Parent processes included PowerShell and cmd.exe, indicating script-based execution  
+- Clear LOLBin abuse pattern consistent with defense evasion techniques  
+
+---
+
+### 📊 Outcome:
+- Successfully detected CertUtil LOLBin abuse using KQL  
+- Identified suspicious execution behavior tied to unknown file activity (ceprolad)  
+- Improved ability to detect encoded and obfuscated command execution  
+- Strengthened understanding of LOLBin-based attack chains and evasion techniques  
+
+---
+
+**Status:** ✅ Completed  
+
+👉 [View Project Details](PROJECT-5-certutil-lolbin-ceprolad-investigation/README.md)
+
 ## 📊 Attack Patterns Detected
 
 | Attack Type               | Project   | Status       |
@@ -189,7 +239,6 @@ I simulated real-world attacks using different Windows LOLBINs (Living-off-the-L
 
 Planned projects to expand detection coverage:
 
-- **Project 5:** Data Exfiltration Detection  
 - **Project 6:** Privilege Escalation Detection  
 
 ---
@@ -229,9 +278,12 @@ To become a **SOC Analyst / Security Operations Engineer**, specializing in:
 - Review **Project 3** (full attack investigation)  
 - Review **Project 4** (LolBin process detection).
 - NOTE **Certutil use-case** (contains Analytics-rule detection query and investigation process)
+- Review **Project 5** (CertUtil LOLBin & Ceprolad Investigation)
+- 
   
 **For recruiters
 - project 4 demonstrates detection evasion usually used by adversaries and how to detect them (Full Soc workflow)
+- Project 5 (CertUtil LOLBin & Ceprolad Investigation) shows step by step Real incident investigation
 - Project 3 demonstrates full SOC workflow  
 - Project 2 highlights analytical thinking  
 - All projects show practical, hands-on experience  
@@ -253,6 +305,6 @@ No real-world systems or organizations were affected.
 
 ---
 
-**Last Updated:** March 2026  
+**Last Updated:** May 2026
 **Status:** 🟢 Active (ongoing improvements)
 
