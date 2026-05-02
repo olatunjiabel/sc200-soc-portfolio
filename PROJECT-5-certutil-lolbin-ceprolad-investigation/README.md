@@ -151,7 +151,7 @@ The investigation graph showed the entities that were analyzed:
 
 The result was **no threats found**.
 
-![Investigation Graph](screenshots/MDE-Investigation-Graph-No threats.png)
+![Investigation Graph](screenshots/MDE-Investigation-Graph-Nothreats.png)
 
 ---
 
