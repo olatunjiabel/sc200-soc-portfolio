@@ -13,7 +13,7 @@
 | **Incident ID** | 142 |
 | **Severity** | Low |
 | **Status** | Resolved |
-| **Verdict** | False Positive — Authorized Security Simulation |
+| **Verdict** | True Positive (benign) — Authorized Security Simulation |
 
 ---
 
@@ -193,9 +193,9 @@ SuspiciousProcesses
 
 ## Conclusion
 
-The alert is a False Positive because the encoded command run by certutil was just a test command run by an analyst to practice investigation skills. The encoded file was **testfile.txt**.
+The alert is a True Positive (benign) because the encoded command run by certutil was just a test command run by an analyst to practice investigation skills. The encoded file was **testfile.txt**.
 
-The other alert with Ceprolad was also a False Positive as it was also a test command from the analyst. But indeed it should be flagged by MDE, as that behaviour is very and seriously suspicious.
+The other alert with Ceprolad was also a True Positive (benign) as it was also a test command from the analyst. But indeed it should be flagged by MDE, as that behaviour is very and seriously suspicious.
 
 To conclude the investigation, I wrote a KQL query in Sentinel to check for outbound connections. I saw that all outbound connections at that timeframe was only to Microsoft, which shows MDE reporting telemetry about the endpoints. No outbound connections to non-Microsoft or suspicious external infrastructure were observed during the timeframe, and the expected certutil download  was blocked by MDE before completion.
 
