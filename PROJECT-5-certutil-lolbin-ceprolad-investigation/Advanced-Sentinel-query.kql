@@ -1,1 +1,17 @@
+let SuspiciousProcesses = DeviceProcessEvents
+| where TimeGenerated >= ago(24h)
+| where FileName =~ "certutil.exe"
+| where InitiatingProcessFileName =~ "powershell.exe"
+| where ProcessCommandLine has_any ("urlcache","encode","decode","split")
+| project DeviceName, AccountName, ProcessCommandLine, ProcessTime=TimeGenerated;
 
+let SuspiciousNetwork = DeviceNetworkEvents
+| where TimeGenerated >= ago(24h)
+| where InitiatingProcessFileName =~ "certutil.exe"
+| where RemoteIPType != "Private"
+| project DeviceName, RemoteUrl, RemoteIP, RemotePort, NetworkTime=TimeGenerated;
+
+SuspiciousProcesses
+| join kind=inner SuspiciousNetwork on DeviceName
+| where abs(datetime_diff("minute", ProcessTime, NetworkTime)) < 5
+| order by ProcessTime desc
