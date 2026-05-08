@@ -5,7 +5,7 @@
 | Field | Details |
 |---|---|
 | **Date** | May 1, 2026 |
-| **Analyst** | SOC Analyst |
+| **Analyst** | Olatunji Abel |
 | **Platform** | Microsoft Defender for Endpoint + Microsoft Sentinel |
 | **Device** | win-5l3oittdjlp (Windows Server 2022) |
 | **User** | WIN-5L3OITTDJLP\Administrator |
