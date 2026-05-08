@@ -32,7 +32,7 @@ It documents my journey toward becoming a **SOC Analyst**, with a strong focus o
 - **Azure Arc** (Hybrid Environment)  
 - **Windows Security Events & Sysmon**
 - **Microsoft defender for endpoints**
-
+- **Microsoft defender XDR**
 ---
 
 ## 📂 Portfolio Projects
@@ -232,7 +232,8 @@ This project focuses on detecting and investigating malicious activity involving
 | Cloud Login Brute Force  | Project 1 | ✅ Complete |
 | Local Login Failures     | Project 2 | ✅ Complete |
 | RDP Brute Force + Success| Project 3 | ✅ Complete |
-
+| Suspicious Lolbin-Process| Project 4 | ✅ Complete |
+| Lolbin Investigation     | Project 5 | ✅ Complete |
 ---
 
 ## 🚀 Coming Next
@@ -279,11 +280,11 @@ To become a **SOC Analyst / Security Operations Engineer**, specializing in:
 - Review **Project 4** (LolBin process detection).
 - NOTE **Certutil use-case** (contains Analytics-rule detection query and investigation process)
 - Review **Project 5** (CertUtil LOLBin & Ceprolad Investigation)
-- 
+  
   
 **For recruiters
 - project 4 demonstrates detection evasion usually used by adversaries and how to detect them (Full Soc workflow)
-- Project 5 (CertUtil LOLBin & Ceprolad Investigation) shows step by step Real incident investigation
+- Project 5 (CertUtil LOLBin & Malware Investigation) shows step by step Real incident investigation
 - Project 3 demonstrates full SOC workflow  
 - Project 2 highlights analytical thinking  
 - All projects show practical, hands-on experience  
@@ -292,7 +293,7 @@ To become a **SOC Analyst / Security Operations Engineer**, specializing in:
 
 ## 📞 Contact
 - **Education:** OND in Computer-Engineering
-- **Certification:** SC-900 (Azure Fundamentals)  
+- **Certification:** SC-900 (Azure Fundamentals), Microsoft-Cyber-Security Analyst Certificate (Course-era)
 - **Location:** Nigeria  
 - **GitHub:** https://github.com/olatunjiabel231-coder  
 
