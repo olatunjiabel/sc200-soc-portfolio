@@ -282,7 +282,7 @@ To become a **SOC Analyst / Security Operations Engineer**, specializing in:
 - Review **Project 5** (CertUtil LOLBin & Ceprolad Investigation)
   
   
-**For recruiters
+**For recruiters**
 - project 4 demonstrates detection evasion usually used by adversaries and how to detect them (Full Soc workflow)
 - Project 5 (CertUtil LOLBin & Malware Investigation) shows step by step Real incident investigation
 - Project 3 demonstrates full SOC workflow  
