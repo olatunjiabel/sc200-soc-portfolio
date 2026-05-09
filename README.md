@@ -295,8 +295,7 @@ To become a **SOC Analyst / Security Operations Engineer**, specializing in:
 - **Education:** OND in Computer-Engineering
 - **Certification:** SC-900 (Azure Fundamentals), Microsoft-Cyber-Security Analyst Certificate (Course-era)
 - **Location:** Nigeria  
-- **GitHub:** https://github.com/olatunjiabel231-coder  
-
+- **GitHub:** https://github.com/olatunjiabel/sc200-soc-portfolio
 ---
 
 ## ⚠️ Disclaimer
