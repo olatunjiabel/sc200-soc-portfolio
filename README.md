@@ -81,7 +81,7 @@ Focused on distinguishing real threats from false positives.
 
 **What I Did:**
 - Generated failed login events on a Windows workstation  
-- Alert triggered for 8+ failed attempts  
+- Alert triggered for 3+ failed attempts  
 - Investigated to validate the alert  
 
 **Investigation Findings:**
