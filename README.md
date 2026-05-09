@@ -297,6 +297,14 @@ To become a **SOC Analyst / Security Operations Engineer**, specializing in:
 - **Location:** Nigeria  
 - **GitHub:** https://github.com/olatunjiabel/sc200-soc-portfolio
 ---
+## 📋 Quick Navigation
+
+1. [Project 0: SOC Environment Setup](#project-0)
+2. [Project 1: Azure AD Brute Force Detection](#project-1)
+3. [Project 2: False Positive Analysis](#project-2)
+4. [Project 3: RDP Brute Force Detection](#project-3)
+5. [Project 4: LOLBIN Process Detection](#project-4)
+6. [Project 5: CertUtil & Malware Investigation](#project-5)
 
 ## ⚠️ Disclaimer
 
