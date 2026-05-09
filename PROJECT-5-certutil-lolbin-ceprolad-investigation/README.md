@@ -170,7 +170,7 @@ let SuspiciousProcesses = DeviceProcessEvents
 | where TimeGenerated >= ago(24h)
 | where FileName has_any ("certutil.exe","cmd.exe","mshta.exe")
 | where InitiatingProcessFileName =~ "Powershell.exe"
-| where ProcessCommandLine has_any ("urlcache","encode","decode","split-f")
+| where ProcessCommandLine has_any ("urlcache","encode","decode","split","-f")
 | summarize
     ProcessEvents = count(),
     TargetedHostName = dcount(DeviceName),
