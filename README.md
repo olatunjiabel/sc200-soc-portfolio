@@ -75,7 +75,7 @@ Detection engineering project using cloud authentication logs.
 
 ---
 
-### 🔹 Project 2: False Positive -Brute Force Detection
+### 🔹 Project 2: False Positive - Brute Force Detection
 
 Focused on distinguishing real threats from false positives.
 
