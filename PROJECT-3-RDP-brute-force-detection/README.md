@@ -7,6 +7,14 @@ This project is about detecting and investigating a brute force attack on a Wind
 The idea is to monitor login activity and identify a situation where multiple failed login attempts are followed by a successful Remote Desktop (RDP) login within a short period of time.
 
 ---
+## 🎯 MITRE ATT&CK Mapping
+
+| Tactic | Technique | ID |
+|---|---|---|
+| Credential Access | Brute Force | T1110 |
+| Credential Access | Password Guessing | T1110.001 |
+| Lateral Movement | Remote Services: Remote Desktop Protocol | T1021.001 |
+
 
 ## 🎯 Objective
 
