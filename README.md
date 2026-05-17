@@ -284,7 +284,7 @@ To become a **SOC Analyst / Security Operations Engineer**, specializing in:
   
   
 **For Recruiters:**
-- project 4 demonstrates detection evasion usually used by adversaries and how to detect them (Full Soc workflow)
+- Project 4 demonstrates detection evasion usually used by adversaries and how to detect them (Full Soc workflow)
 - Project 5 (CertUtil LOLBin & Malware Investigation) shows step by step Real incident investigation
 - Project 3 demonstrates full SOC workflow  
 - Project 2 highlights analytical thinking  
@@ -294,7 +294,7 @@ To become a **SOC Analyst / Security Operations Engineer**, specializing in:
 
 ## 📞 Contact
 - **Education:** OND in Computer-Engineering
-- **Certification:** SC-900 (Azure Fundamentals), Microsoft-Cyber-Security Analyst Certificate (Course-era)
+- **Certification:** SC-900 (Azure Fundamentals), Microsoft-Cyber-Security Analyst Certificate (Coursera)
 - **Location:** Nigeria  
 - **GitHub:** https://github.com/olatunjiabel231-coder/sc200-soc-portfolio
 ---
