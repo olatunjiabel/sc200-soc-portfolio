@@ -165,14 +165,6 @@ I simulated real-world attacks using different Windows LOLBINs (Living-off-the-L
 
 👉 [View Project Details](PROJECT-4-lolbins-process-detection)
 
-## 🚀 Key Achievements
-
-- Built a functional SOC lab environment from scratch  
-- Simulated and detected real-world attack scenarios  
-- Developed detection rules using KQL  
-- Performed incident investigation and validation  
-- Reduced false positives through proper analysis  
-- Worked with multiple log sources (Azure AD & Windows Events)  
 
 ---
 
@@ -224,6 +216,15 @@ This project focuses on detecting and investigating malicious activity involving
 **Status:** ✅ Completed  
 
 👉 [View Project Details](PROJECT-5-certutil-lolbin-ceprolad-investigation/README.md)
+
+## 🚀 Key Achievements
+
+- Built a functional SOC lab environment from scratch  
+- Simulated and detected real-world attack scenarios  
+- Developed detection rules using KQL  
+- Performed incident investigation and validation  
+- Reduced false positives through proper analysis  
+- Worked with multiple log sources (Azure AD & Windows Events)  
 
 ## 📊 Attack Patterns Detected
 
@@ -295,7 +296,7 @@ To become a **SOC Analyst / Security Operations Engineer**, specializing in:
 - **Education:** OND in Computer-Engineering
 - **Certification:** SC-900 (Azure Fundamentals), Microsoft-Cyber-Security Analyst Certificate (Course-era)
 - **Location:** Nigeria  
-- **GitHub:** https://github.com/olatunjiabel/sc200-soc-portfolio
+- **GitHub:** https://github.com/olatunjiabel231-coder/sc200-soc-portfolio
 ---
 ## 📋 Quick Navigation
 
