@@ -1,4 +1,4 @@
-# Project 2: False Positive Analysis Brute Force Detection
+# Project 2: False Positive Analysis - Brute Force Detection
 
 ## 📋 Incident Summary
 
@@ -20,6 +20,11 @@
 In this project I simulated multiple failed login attempts on a Windows machine and used Microsoft Sentinel to detect and investigate the activity.
 
 The goal was to determine whether the behavior represented a real brute force attack or normal user activity, a critical SOC skill for Identifying False Positives
+
+---
+## ⚙️ What Happened
+
+I intentionally entered incorrect passwords multiple times while trying to unlock my Windows VM. This generated several failed login events (Event ID 4625), which were ingested into Microsoft Sentinel and triggered an analytics rule.
 
 ---
 
@@ -50,7 +55,7 @@ SecurityEvent
 **What this query does:**
 - Looks for accounts with 3+ failed logins within 10 minutes
 - it displays the EventID which showed 4625 as failure
-- count all failed atttempts and project its IP,Account, and Logontype
+- count all failed attempts and project its IP,Account, and Logontype
 - Returns result where Failed attempts is greater than or equal to 3
   
 ---
