@@ -2,9 +2,21 @@
 
 ## Project Overview
 
-This project sole aim is to showcase the step-by-step process of generating an automated response to alerts or incidents in Microsoft Sentinel.
+The main aim of this project is to design an automated response pipeline capable of automatically responding to alerts and incidents inside a SOC environment using Microsoft Sentinel and SOAR technologies.
 
-SOAR (Security Orchestration and Automated Remediation) refers to the activities that are put in place to automatically respond to alerts or incidents in a SOC.
+This project demonstrates how some incidents can be handled automatically without requiring constant manual intervention from a SOC analyst.
+
+In this lab, Microsoft Sentinel was configured to detect potential brute-force authentication activity using Analytics Rules and KQL queries. Once suspicious activity is detected, an incident is automatically created and a Logic App playbook executes an automated response workflow.
+
+The SOC analyst is then able to review the incident, investigate what happened, and validate the automated actions that were triggered inside the Defender portal.
+
+SOAR (Security Orchestration, Automation, and Response) refers to the automated activities and workflows put in place to respond to alerts and incidents more efficiently.
+
+This project shows how SOAR can:
+- Reduce analyst workload
+- Improve response time
+- Automate repetitive response tasks
+- Improve visibility into authentication attacks
 
 ---
 
@@ -41,11 +53,19 @@ SOAR (Security Orchestration and Automated Remediation) refers to the activities
 
 ## What I Built
 
-### 1. Analytic Rule — Brute-force-detection
+Firstly, my aim is to detect brute-force automatically and respond automatically.
 
-I created an Analytics rule to trigger when multiple failed attempts occur on my Microsoft account (Brute-force-detection).
+This involved me using Microsoft Sentinel and SOAR.
 
-The Analytics rule generates incidents from the alert.
+I wrote a KQL to detect and an Analytics Rule was configured to alert or create an incident in Defender portal.
+
+After that, I went to Logic Apps and created a playbook to alert my Outlook mail anytime an incident like the brute-force attack happens.
+
+Then while I was trying to add the playbook to my Analytics Rule in Automation, I could not click on the brute-force-response playbook I created.
+
+It took me a while to figure out I had to assign the role of Sentinel Automation Contributor to Azure Security Insights in IAM.
+
+Once I assigned the role successfully, the playbook was integrated properly and the SOAR workflow started working.
 
 ![Analytics Rule](screenshots/01-analytics-rule.png)
 
