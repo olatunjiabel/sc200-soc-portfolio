@@ -217,6 +217,41 @@ This project focuses on detecting and investigating malicious activity involving
 
 👉 [View Project Details](PROJECT-5-certutil-lolbin-ceprolad-investigation/README.md)
 
+
+### 🔹 Project 6: Sentinel SOAR — Brute Force Automated Response
+
+This project sole aim is to showcase the step-by-step process of generating an automated response to alerts or incidents in Microsoft Sentinel.
+
+SOAR (Security Orchestration and Automated Remediation) refers to the activities that are put in place to automatically respond to alerts or incidents in a SOC.
+
+**What I Did:**
+- Created an Analytics rule (Brute-force-detection) to trigger when multiple failed attempts occur on my Microsoft account
+- Wrote a KQL query to detect 5+ failed login attempts with 1+ successful attempt within 1 hour
+- Created a Logic App and added a Playbook to alert my Outlook mail every time a brute force incident happens
+- Assigned the Playbook to the Analytic rule via the Automation Tab in Sentinel
+- Assigned the role of Sentinel Automation Contributor to Azure Security Insights in IAM to enable SOAR
+- Simulated a Brute Force Attack by entering multiple wrong passwords on my Microsoft user account to generate an alert/incident
+
+**Key Findings:**
+- Analytics rule successfully generated an incident from the brute force simulation
+- Attacker user account identified with 20 failed attempts from IP `102.88.110.157`
+- MITRE ATT&CK Technique: **T1110 – Brute Force** (Credential Access)
+- Logic App playbook triggered automatically and sent email notification to SOC analyst Outlook mailbox
+
+**SOAR Workflow:**
+```
+Brute Force Attempt → KQL Query Detection → Analytics Rule
+→ Incident Creation → Automation Rule → Logic App Workflow → Outlook Alert ✅
+```
+
+**What I Learned:**
+- To enable SOAR and to be able to add automation rules to my Analytic rule, I was prompted to assign the role of Sentinel Automation Contributor to Azure Security Insights in IAM (Identity Access Management)
+- The license for Defender for Office 365 Plan 2 E5 is needed or Business Premium License to be able to use the Outlook connector in the Logic App
+- SOAR allows for the immediate remediation of threats — the SOC Analyst was alerted directly on Outlook to check out a potential Brute Force Attack
+
+**Status:** ✅ Completed  
+👉 [View Project Details]()
+
 ## 🚀 Key Achievements
 
 - Built a functional SOC lab environment from scratch  
@@ -224,7 +259,8 @@ This project focuses on detecting and investigating malicious activity involving
 - Developed detection rules using KQL  
 - Performed incident investigation and validation  
 - Reduced false positives through proper analysis  
-- Worked with multiple log sources (Azure AD & Windows Events)  
+- Worked with multiple log sources (Azure AD & Windows Events)
+- Built and automated a full SOAR pipeline using Logic Apps and Microsoft Sentinel
 
 ## 📊 Attack Patterns Detected
 
@@ -235,13 +271,14 @@ This project focuses on detecting and investigating malicious activity involving
 | RDP Brute Force + Success| Project 3 | ✅ Complete |
 | Suspicious Lolbin-Process| Project 4 | ✅ Complete |
 | Lolbin Investigation     | Project 5 | ✅ Complete |
+| SOAR Automated Response  | Project 6 | ✅ Complete |
 ---
 
 ## 🚀 Coming Next
 
 Planned projects to expand detection coverage:
 
-- **Project 6:** Sentinel-SOAR-BruteForce-Automation
+- **Project 6:** Email Phishing Detection
 
 ---
 
@@ -255,7 +292,8 @@ This portfolio demonstrates hands-on experience with:
 - Incident investigation workflows  
 - KQL query development  
 - Windows Security Event analysis  
-- Azure AD authentication monitoring  
+- Azure AD authentication monitoring
+- SOAR automation using Logic Apps and Playbooks  
 
 ---
 
@@ -281,9 +319,11 @@ To become a **SOC Analyst / Security Operations Engineer**, specializing in:
 - Review **Project 4** (LolBin process detection).
 - NOTE **Certutil use-case** (contains Analytics-rule detection query and investigation process)
 - Review **Project 5** (CertUtil LOLBin & Ceprolad Investigation)
+- Review **Project 6** (SOAR automated response pipeline)
   
   
 **For Recruiters:**
+- Project 6 demonstrates end-to-end SOAR automation detection to analyst notification
 - Project 4 demonstrates detection evasion usually used by adversaries and how to detect them (Full Soc workflow)
 - Project 5 (CertUtil LOLBin & Malware Investigation) shows step by step Real incident investigation
 - Project 3 demonstrates full SOC workflow  
@@ -306,6 +346,7 @@ To become a **SOC Analyst / Security Operations Engineer**, specializing in:
 4. [Project 3: RDP Brute Force Detection](#project-3)
 5. [Project 4: LOLBIN Process Detection](#project-4)
 6. [Project 5: CertUtil & Malware Investigation](#project-5)
+7. [Project 6: SOAR Automated Response](#project-6)
 
 ## ⚠️ Disclaimer
 
