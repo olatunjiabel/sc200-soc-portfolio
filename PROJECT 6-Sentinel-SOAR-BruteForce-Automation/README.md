@@ -107,8 +107,15 @@ After simulating a Brute Force Attack by entering multiple wrong passwords on my
 ---
 
 ### 4. Logic App / Playbook
+"I created a Logic App with the following configuration:
 
-I then created a Logic App and added a Playbook to alert my Outlook mail every time an incident like the brute force attack happens.
+**Trigger:** When an incident is created or updated in Microsoft Sentinel
+**Condition:** Filter for brute force incidents only
+**Actions:** 
+- Send email notification to SOC analyst mailbox
+
+The Logic App validates the incident and only triggers for brute force 
+incidents, avoiding unnecessary alert fatigue.
 
 ![Logic App Playbook](screenshots/05-logic-app-playbook.png)
 
@@ -160,11 +167,11 @@ Outlook Alert ✅
 
 ## What I Learned
 
-To enable SOAR and to be able to add automation rules to my Analytic rule, I was prompted to assign the role of Sentinel Automation Contributor to Azure Security Insights in IAM (Identity Access Management).
+To enable SOAR and to be able to add automation rules to my Analytic rule, I was prompted to assign the role of Sentinel Automation Contributor to Azure Security Insights in IAM (Identity Access Management).This is a very important step to do in other to carry out SOAR automation function properly.
 
-The license for Defender for Office 365 Plan 2 E5 is needed or Business Premium License to be able to use the Outlook connector in the Logic App. This pushed me to set up a proper Microsoft 365 licensed user in my home lab.
+The license for Defender for Office 365 Plan 2 E5 is needed or Business Premium License to be able to use the Outlook connector in the Logic App. This pushed me to set up a proper Microsoft 365 licensing configuration in my home lab.
 
-The impact of SOAR in real-time business is that SOAR allows for the immediate remediation of threats. From my project, the SOAR alerted the SOC Analyst directly on Outlook account to check out a potential Brute Force Attack. Other SOAR remediation actions can be configured to minimize threat impact on assets.
+The impact of SOAR in real-time business is that SOAR allows for the immediate remediation of threats. From my project, the SOAR alerted the SOC Analyst directly on Outlook account to check out a potential Brute Force Attack. This can reduce the time between incident in defender portal and human awareweness.
 
 ---
 
