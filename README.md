@@ -241,7 +241,7 @@ This project focuses on detecting and investigating malicious activity involving
 
 Planned projects to expand detection coverage:
 
-- **Project 6:** Privilege Escalation Detection  
+- **Project 6:** Sentinel-SOAR-BruteForce-Automation
 
 ---
 
