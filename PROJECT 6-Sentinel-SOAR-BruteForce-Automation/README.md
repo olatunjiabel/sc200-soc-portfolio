@@ -84,7 +84,7 @@ SigninLogs
 | sort by LastSeen desc
 ```
 
-The KQL is set to automatically create an incident in Defender portal when there's 5 failed attempts or greater and successful attempts is greater or equal to 1.
+The KQL is set to automatically create an incident in Defender portal when there's 5 failed attempts or greater and successful attempts is greater than or equal to 1.
 
 ![KQL Detection Query](screenshots/03-kql-detection-query.png)
 
@@ -107,7 +107,7 @@ After simulating a Brute Force Attack by entering multiple wrong passwords on my
 ---
 
 ### 4. Logic App / Playbook
-"I created a Logic App with the following configuration:
+I created a Logic App with the following configuration:
 
 **Trigger:** When an incident is created or updated in Microsoft Sentinel
 **Condition:** Filter for brute force incidents only
