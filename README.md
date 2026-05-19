@@ -250,7 +250,7 @@ Brute Force Attempt → KQL Query Detection → Analytics Rule
 - SOAR allows for the immediate remediation of threats — the SOC Analyst was alerted directly on Outlook to check out a potential Brute Force Attack
 
 **Status:** ✅ Completed  
-👉 [View Project Details]()
+👉 [View Project Details](PROJECT-6-Sentinel-SOAR-BruteForce-Automation)
 
 ## 🚀 Key Achievements
 
@@ -278,7 +278,7 @@ Brute Force Attempt → KQL Query Detection → Analytics Rule
 
 Planned projects to expand detection coverage:
 
-- **Project 6:** Email Phishing Detection
+- **Project 7:** Email Phishing Detection
 
 ---
 
