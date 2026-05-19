@@ -141,7 +141,7 @@ The SOC analyst receives a Brute-Force Alert email directly on Outlook every tim
 
 Using the Brute Force Attack method, I simulated by entering multiple wrong passwords on my Microsoft user account to generate an alert/incident in Defender.
 
-- An Analytics Rule was already created beforehand with the KQL written and set to automatically create an incident in Defender portal when there's **5 failed attempts or greater** AND **successful attempts is greater or equal to 1**.
+- An Analytics Rule was already created beforehand with the KQL written and set to automatically create an incident in Defender portal when there's **5 failed attempts or greater** AND **successful attempts is greater than or equal to 1**.
 
 ---
 
