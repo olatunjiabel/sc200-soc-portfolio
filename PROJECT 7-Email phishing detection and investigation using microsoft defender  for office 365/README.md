@@ -94,7 +94,9 @@ The email contained **3 URLs**, but no threats were identified because the email
 
 ### ⚠️ Analyst Observation
 
-As a SOC Analyst, emails passing SPF, DKIM, and DMARC do not automatically guarantee legitimacy.
+As a SOC Analyst, emails passing SPF, DKIM, and DMARC do not automatically guarantee legitimacy. 
+
+In this simulation, all three checks passed because the email was sent from Microsoft's own Attack Simulation Training infrastructure, which controls the sending domain and IP.
 
 An adversary can open a Gmail account and use it to send a phishing email.
 
