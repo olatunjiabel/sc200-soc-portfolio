@@ -178,15 +178,21 @@ As a result, no automated remediation actions were observed during this exercise
 
 ---
 
+
 ## Lessons Learned
 
 This project showed me that emails passing SPF, DKIM, and DMARC do not automatically mean they are safe.
 
-The user still clicked the phishing link and submitted credentials even though all authentication checks passed.
+The user Credential was still harvested even though all authentication checks passed.
 
 I also learned how to use Threat Explorer to investigate phishing emails, review URLs, check sender information, and analyze user activity.
 
+I observed that Microsoft Attack Simulation Training did not generate any alerts or incidents. I was expecting to see Automated Investigation and Response (AIR) in action, but because the phishing email was part of an authorized Microsoft simulation, it did not trigger the same response as a real phishing attack.
+
+This also helped me understand that advanced hunting and Microsoft Sentinel may be required for deeper investigations and cross-correlation when investigating real-world phishing activity.
+
 This project reinforced the importance of user awareness training and layered email security controls.
+
 
 ---
 
