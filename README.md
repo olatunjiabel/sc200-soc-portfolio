@@ -252,6 +252,47 @@ Brute Force Attempt → KQL Query Detection → Analytics Rule
 **Status:** ✅ Completed  
 👉 [View Project Details](PROJECT-6-Sentinel-SOAR-BruteForce-Automation)
 
+### 🔹 Project 7: Email Phishing Detection & Investigation
+
+This project focuses on simulating and investigating a credential harvesting phishing attack using Microsoft Defender for Office 365 Plan 2.
+
+The objective was to understand how phishing emails are delivered, how users interact with them, and how SOC analysts investigate email-based threats.
+
+**What I Did:**
+
+* Created a credential harvesting phishing simulation using Microsoft Attack Simulation Training
+* Delivered a phishing email to a user within my Microsoft 365 tenant
+* Simulated user interaction by clicking the phishing link and submitting credentials
+* Investigated the phishing email using Microsoft Defender Threat Explorer
+* Reviewed sender information, sender IP address, and recipient details
+* Analyzed SPF, DKIM, and DMARC authentication results
+* Investigated URLs contained within the phishing email
+* Validated sender IP reputation using VirusTotal
+* Documented SOC analyst response procedures for credential harvesting incidents
+
+**Key Findings:**
+
+* The phishing simulation successfully harvested user credentials
+* The phishing email was delivered and interacted with by the user
+* SPF, DKIM, and DMARC all passed successfully
+* Three URLs were identified within the email
+* No malicious verdict was assigned because the email originated from Microsoft Attack Simulation Training
+* User click activity was recorded and available for investigation in Microsoft Defender
+* Authentication checks validate sender infrastructure but do not guarantee email legitimacy
+
+**What I Learned:**
+
+* Phishing emails can still be successful even when SPF, DKIM, and DMARC pass
+* Threat Explorer provides valuable visibility into email activity, sender information, and user interactions
+* User awareness remains a critical security control against phishing attacks
+* Microsoft Attack Simulation Training provides a safe environment for testing phishing scenarios
+* Advanced investigations may require additional correlation using Advanced Hunting or Microsoft Sentinel
+
+**Status:** ✅ Completed
+
+👉 [View Project Details](PROJECT 7-Email phishing detection and investigation using microsoft defender for office 365/README.md)
+
+
 ## 🚀 Key Achievements
 
 - Built a functional SOC lab environment from scratch  
@@ -261,6 +302,9 @@ Brute Force Attempt → KQL Query Detection → Analytics Rule
 - Reduced false positives through proper analysis  
 - Worked with multiple log sources (Azure AD & Windows Events)
 - Built and automated a full SOAR pipeline using Logic Apps and Microsoft Sentinel
+- - Investigated phishing emails using Microsoft Defender for Office 365
+- Performed email authentication analysis (SPF, DKIM, DMARC)
+- Validated sender IP reputation using VirusTotal
 
 ## 📊 Attack Patterns Detected
 
@@ -272,6 +316,7 @@ Brute Force Attempt → KQL Query Detection → Analytics Rule
 | Suspicious Lolbin-Process| Project 4 | ✅ Complete |
 | Lolbin Investigation     | Project 5 | ✅ Complete |
 | SOAR Automated Response  | Project 6 | ✅ Complete |
+| Email Phishing Investigation | Project 7 | ✅ Complete |
 ---
 
 ## 🚀 Coming Next
