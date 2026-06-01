@@ -290,7 +290,7 @@ The objective was to understand how phishing emails are delivered, how users int
 
 **Status:** ✅ Completed
 
-👉 [View Project Details](PROJECT 7-Email phishing detection and investigation using microsoft defender for office 365/README.md)
+👉 [View Project Details]()
 
 
 ## 🚀 Key Achievements
@@ -366,15 +366,18 @@ To become a **SOC Analyst / Security Operations Engineer**, specializing in:
 - NOTE **Certutil use-case** (contains Analytics-rule detection query and investigation process)
 - Review **Project 5** (CertUtil LOLBin & Ceprolad Investigation)
 - Review **Project 6** (SOAR automated response pipeline)
-  
+- Review **Project 7** (PROJECT 7: Email phishing detection and investigation using microsoft defender  for office 365)
   
 **For Recruiters:**
-- Project 6 demonstrates end-to-end SOAR automation detection to analyst notification
-- Project 4 demonstrates detection evasion usually used by adversaries and how to detect them (Full Soc workflow)
-- Project 5 (CertUtil LOLBin & Malware Investigation) shows step by step Real incident investigation
-- Project 3 demonstrates full SOC workflow  
-- Project 2 highlights analytical thinking  
-- All projects show practical, hands-on experience  
+
+* Project 7 demonstrates hands-on phishing detection and investigation using Microsoft Defender for Office 365, including Attack Simulation Training, Threat Explorer, email authentication analysis (SPF, DKIM, DMARC), URL investigation, and IP reputation validation.
+* Project 6 demonstrates end-to-end SOAR automation from detection to analyst notification using Microsoft Sentinel and Logic Apps.
+* Project 5 demonstrates step-by-step LOLBin and malware investigation using CertUtil abuse, process analysis, and KQL-based detection.
+* Project 4 demonstrates detection of LOLBin abuse, encoded commands, and defense evasion techniques commonly used by adversaries.
+* Project 3 demonstrates a complete SOC workflow from attack simulation to detection, incident creation, and investigation.
+* Project 2 highlights analytical thinking and the ability to distinguish true positives from false positives.
+* All projects demonstrate practical, hands-on experience with Microsoft security technologies, detection engineering, threat investigation, and incident response workflows.
+
 
 ---
 
@@ -393,6 +396,7 @@ To become a **SOC Analyst / Security Operations Engineer**, specializing in:
 5. [Project 4: LOLBIN Process Detection](#project-4)
 6. [Project 5: CertUtil & Malware Investigation](#project-5)
 7. [Project 6: SOAR Automated Response](#project-6)
+8. [PROJECT 7: Email phishing detection and investigation using microsoft defender  for office 365](#project-7)
 
 ## ⚠️ Disclaimer
 
