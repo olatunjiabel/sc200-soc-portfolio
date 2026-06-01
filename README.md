@@ -319,11 +319,6 @@ The objective was to understand how phishing emails are delivered, how users int
 | Email Phishing Investigation | Project 7 | ✅ Complete |
 ---
 
-## 🚀 Coming Next
-
-Planned projects to expand detection coverage:
-
-- **Project 7:** Email Phishing Detection
 
 ---
 
@@ -339,7 +334,13 @@ This portfolio demonstrates hands-on experience with:
 - Windows Security Event analysis  
 - Azure AD authentication monitoring
 - SOAR automation using Logic Apps and Playbooks  
-
+- Simulated a credential harvesting phishing attack
+- Investigated phishing email delivery and user interaction
+- Analyzed SPF, DKIM, and DMARC authentication results
+- Reviewed sender IP addresses and URL activity
+- Used Threat Explorer to investigate phishing events
+- Performed external threat intelligence validation with VirusTotal
+  
 ---
 
 ## 📈 Career Goal
