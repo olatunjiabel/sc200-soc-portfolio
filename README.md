@@ -290,7 +290,7 @@ The objective was to understand how phishing emails are delivered, how users int
 
 **Status:** ✅ Completed
 
-👉 [View Project Details](PROJECT%207-Email%20phishing%20detection%20and%20investigation%20using%20microsoft%20defender%20for%20office%20365/README.md)
+👉 [View Project Details](PROJECT-7-Email%20phishing%20detection%20and%20investigation%20using%20microsoft%20defender%20for%20office%20365/README.md)
 
 ## 🚀 Key Achievements
 
