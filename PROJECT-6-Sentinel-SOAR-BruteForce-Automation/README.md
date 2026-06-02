@@ -39,7 +39,7 @@ This project shows how SOAR can:
 - **Automation Rule**
 - **Logic App / Playbook**
 - **Defender for Office 365 / Office 365 E5 License**
-- **Role Assignment via IAM** — Sentinel Automation Contributor assigned to Azure Security Insights
+- **Role Assignment via IAM** - Sentinel Automation Contributor assigned to Azure Security Insights
 
 ---
 
