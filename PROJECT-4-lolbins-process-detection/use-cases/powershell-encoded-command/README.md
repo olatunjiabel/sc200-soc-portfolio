@@ -1,6 +1,6 @@
 # PowerShell Encoded Command Execution (LOLBIN Abuse)
 
-## 📌 Attack Simulation
+##  Attack Simulation
 In this simulation, I used `powershell.exe` to execute an **encoded command**.
 
 The goal was to mimic how attackers hide what they are doing by encoding their commands.
@@ -14,12 +14,12 @@ Attackers commonly use PowerShell encoding to:
 
 ---
 
-## 📊 Log Source
+##  Log Source
 - Sysmon (Event ID 1 – Process Creation)
 
 ---
 
-## 🔍 Detection (KQL Query)
+##  Detection (KQL Query)
 
 Detection was performed using a KQL query to identify PowerShell executing encoded commands.
 
@@ -39,12 +39,12 @@ Event
 
 ---
 
-## 📸 Detection Result
+##  Detection Result
 ![PowerShell Detection](../screenshots/powershell-encoded-detection.png)
 
 ---
 
-## 🧠 Investigation
+##  Investigation
 
 From the logs, I observed that:
 
@@ -63,12 +63,12 @@ Key findings:
 
 ---
 
-## 📸 Process Execution Evidence
+##  Process Execution Evidence
 ![PowerShell CommandLine](../screenshots/powershell-encoded-commandline.png)
 
 ---
 
-## 🔄 SOC Workflow
+##  SOC Workflow
 
 **1. Detection**  
 - Suspicious PowerShell execution identified  
@@ -96,7 +96,7 @@ Key findings:
 
 ---
 
-## 🚨 Response Actions
+##  Response Actions
 - Device isolation  
 - Process termination  
 - Full malware scan using security tools (e.g., Defender for Endpoint)  
@@ -104,7 +104,7 @@ Key findings:
 
 ---
 
-## 🎯 MITRE ATT&CK Mapping
+##  MITRE ATT&CK Mapping
 
 - Technique: **T1059.001 – PowerShell**  
 - Tactic: **Execution / Defense Evasion**  
