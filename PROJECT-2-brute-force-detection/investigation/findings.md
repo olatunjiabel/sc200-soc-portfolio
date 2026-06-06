@@ -1,6 +1,6 @@
 # Investigation Findings – Project 2: False Positive Analysis
 
-## 📊 What I Found
+##  What I Found
 
 | Field | Value |
 |---|---|
@@ -12,7 +12,7 @@
 
 ---
 
-## 🧩 Investigation & Triage Process
+##  Investigation & Triage Process
 
 **Step 1 - Alert fired**
 Analytics rule triggered after 3+ failed logins detected within 10 minutes.
@@ -28,13 +28,13 @@ The combination of these findings made me come to the conclusion that it was jus
 
 ---
 
-## 🔍 Detailed Analysis
+##  Detailed Analysis
 
 After thorough investigation I was able to discover that the alert was a false positive because the logon type 7 is a session unlock logon. A logon type 10 would have been more suspicious which is RDP. The source IP was 127.0.0.1 local host loopback address which insinuates that the failed attempts originated from the machine itself. The combination of these findings made me come to the conclusion that it was just the user entering an incorrect password while unlocking their machine.
 
 ---
 
-## 📸 Evidence
+##  Evidence
 
 Screenshots of the following are included in the `/screenshots` folder:
 
