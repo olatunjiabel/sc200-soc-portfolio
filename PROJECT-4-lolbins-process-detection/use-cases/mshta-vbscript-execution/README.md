@@ -1,6 +1,6 @@
 # MSHTA VBScript Execution (LOLBIN Abuse)
 
-## 📌 Attack Simulation
+##  Attack Simulation
 A simulated attack was performed using `mshta.exe` to execute a VBScript payload.
 
 The VBScript used in this simulation displayed a simple message box (`msgbox Test`) to confirm execution. This demonstrates how attackers can abuse legitimate Windows binaries (LOLBins) to execute scripts.
@@ -11,12 +11,12 @@ In a real-world scenario, an attacker could replace this script with a malicious
 
 ---
 
-## 📊 Log Source
+##  Log Source
 - Sysmon (Event ID 1 – Process Creation)
 
 ---
 
-## 🔍 Detection (KQL Query)
+##  Detection (KQL Query)
 
 Detection was performed using a targeted KQL query to identify `mshta.exe` executing VBScript from Sysmon logs.
 
@@ -36,13 +36,13 @@ Event
 
 ---
 
-### 📸 Detection Result
+###  Detection Result
 ![MSHTA Detection](../screenshots/mshta-vbscript-detection.png)
 
 
 ---
 
-## 🧠 Investigation
+##  Investigation
 
 - Sysmon logs confirmed execution of `mshta.exe` on the endpoint  
 - The command line revealed:
@@ -68,12 +68,12 @@ Event
 
 ---
 
-### 📸 Process Execution Evidence
+###  Process Execution Evidence
 ![MSHTA CommandLine](../screenshots/mshta-vbscript-commandline.png)
 
 ---
 
-## 🔄 SOC Workflow
+##  SOC Workflow
 
 **1. Detection**  
 - Suspicious execution identified via KQL query  
@@ -101,7 +101,7 @@ Event
 
 ---
 
-## 🚨 Response Actions
+##  Response Actions
 - Device isolation  
 - Process termination  
 - Blocking suspicious scripts or execution methods  
@@ -109,7 +109,7 @@ Event
 
 ---
 
-## 🎯 MITRE ATT&CK Mapping
+##  MITRE ATT&CK Mapping
 
 - Technique: **T1218.005 – Mshta**  
 - Tactic: **Defense Evasion / Execution**  
