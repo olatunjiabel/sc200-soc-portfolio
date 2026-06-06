@@ -1,4 +1,4 @@
-# 🛡️ Microsoft Sentinel SOAR Project — Brute Force Detection
+#  Microsoft Sentinel SOAR Project — Brute Force Detection
 
 ## Project Overview
 
@@ -129,7 +129,7 @@ The Send an email (V2) action was configured to notify the SOC analyst mailbox w
 
 ---
 
-### 6. Outlook Alert — It Works! ✅
+### 6. Outlook Alert — It Works! 
 
 The SOC analyst receives a Brute-Force Alert email directly on Outlook every time the incident is triggered.
 
@@ -160,7 +160,7 @@ Automation Rule
       ↓
 Logic App Workflow
       ↓
-Outlook Alert ✅
+Outlook Alert 
 ```
 
 ---
