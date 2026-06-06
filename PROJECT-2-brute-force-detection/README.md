@@ -1,6 +1,6 @@
 # Project 2: False Positive Analysis - Brute Force Detection
 
-## 📋 Incident Summary
+##  Incident Summary
 
 | Field | Details |
 |---|---|
@@ -15,20 +15,20 @@
 
 ---
 
-## 🧠 Overview
+##  Overview
 
 In this project I simulated multiple failed login attempts on a Windows machine and used Microsoft Sentinel to detect and investigate the activity.
 
 The goal was to determine whether the behavior represented a real brute force attack or normal user activity, a critical SOC skill for Identifying False Positives
 
 ---
-## ⚙️ What Happened
+##  What Happened
 
 I intentionally entered incorrect passwords multiple times while trying to unlock my Windows VM. This generated several failed login events (Event ID 4625), which were ingested into Microsoft Sentinel and triggered an analytics rule.
 
 ---
 
-## 🎯 MITRE ATT&CK Mapping
+##  MITRE ATT&CK Mapping
 
 | Tactic | Technique | ID |
 |---|---|---|
@@ -38,7 +38,7 @@ I intentionally entered incorrect passwords multiple times while trying to unloc
 > Note: These techniques describe what the alert appeared to be. Investigation confirmed this was NOT malicious activity.
 
 ---
-## 🔍 Detection Query (KQL)
+##  Detection Query (KQL)
 
 ```kql
 SecurityEvent
@@ -60,7 +60,7 @@ SecurityEvent
   
 ---
 
-## ✅ Conclusion
+##  Conclusion
 
 **Verdict: False Positive**
 
@@ -72,7 +72,7 @@ This taught me that not every alert needs to be escalated. Understanding  what t
 
 ---
 
-## 🛠️ Tools Used
+##  Tools Used
 
 - Microsoft Sentinel
 - Log Analytics Workspace
@@ -80,7 +80,7 @@ This taught me that not every alert needs to be escalated. Understanding  what t
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 - `/screenshots` — Sentinel incident, query results, event logs
 - `/queries` — KQL detection query
