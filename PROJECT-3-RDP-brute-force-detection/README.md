@@ -1,13 +1,13 @@
 # Microsoft Sentinel SOC Lab – RDP Brute Force Detection & Investigation
 
-## 🧠 Overview
+##  Overview
 
 This project is about detecting and investigating a brute force attack on a Windows Server using Microsoft Sentinel.
 
 The idea is to monitor login activity and identify a situation where multiple failed login attempts are followed by a successful Remote Desktop (RDP) login within a short period of time.
 
 ---
-## 🎯 MITRE ATT&CK Mapping
+##  MITRE ATT&CK Mapping
 
 | Tactic | Technique | ID |
 |---|---|---|
@@ -16,7 +16,7 @@ The idea is to monitor login activity and identify a situation where multiple fa
 | Lateral Movement | Remote Services: Remote Desktop Protocol | T1021.001 |
 
 
-## 🎯 Objective
+##  Objective
 
 The goal of this project is to:
 
@@ -27,7 +27,7 @@ The goal of this project is to:
 
 ---
 
-## 🏗️ Lab Architecture
+##  Lab Architecture
 
 The environment was set up like this:
 
@@ -60,7 +60,7 @@ At first, I didn’t realize that how I handled the RDP session would affect the
 
 ---
 
-## 📊 Logs Observed
+##  Logs Observed
 
 During the simulation, the following logs were generated:
 
@@ -79,7 +79,7 @@ Initially, I thought RDP would always show LogonType 10, but I later discovered 
 
 ---
 
-## 🔍 Detection Logic
+##  Detection Logic
 
 The detection rule is designed to catch:
 
@@ -94,7 +94,7 @@ The detection rule is designed to catch:
 
 ---
 
-## 🧾 KQL Query
+##  KQL Query
 
 ```kql
 SecurityEvent
@@ -115,7 +115,7 @@ SecurityEvent
 
 ---
 
-## ⚙️ Analytics Rule
+##  Analytics Rule
 
 The detection query was used to create a scheduled analytics rule in Microsoft Sentinel.
 
@@ -124,7 +124,7 @@ The detection query was used to create a scheduled analytics rule in Microsoft S
 
 ---
 
-## 🚨 Incident Creation
+##  Incident Creation
 
 Once the rule was triggered, Microsoft Sentinel generated an incident.
 
@@ -133,7 +133,7 @@ Once the rule was triggered, Microsoft Sentinel generated an incident.
 
 ---
 
-## 🧪 Investigation
+##  Investigation
 
 Inside the incident, I investigated the attack using the attack graph.
 
@@ -149,7 +149,7 @@ From the investigation:
 
 ---
 
-## ✅ Conclusion
+##  Conclusion
 
 This project demonstrates how a brute force attack can be detected using Microsoft Sentinel by correlating failed and successful login events.
 
@@ -164,7 +164,7 @@ Through this lab, I was able to:
 
 ---
 
-## 💭 Personal Note
+##  Personal Note
 
 At first, I was confused when my detection didn’t work immediately.  
 
