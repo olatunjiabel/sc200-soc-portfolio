@@ -1,6 +1,6 @@
 # PROJECT 4 – LOLBins Process Detection (Suspicious Malware Execution)
 
-## 📌 Overview
+##  Overview
 This project focuses on detecting and investigating the abuse of **Living-off-the-Land Binaries (LOLBins)** for malicious execution.
 
 LOLBins are legitimate Windows binaries that attackers abuse to execute payloads, evade detection, and perform fileless attacks.
@@ -9,7 +9,7 @@ The goal of this project is to simulate real-world attack techniques, detect the
 
 ---
 
-## 🎯 Objectives
+##  Objectives
 - Simulate LOLBins-based attack techniques  
 - Detect suspicious process execution using Sysmon logs  
 - Analyze command-line behavior  
@@ -18,15 +18,15 @@ The goal of this project is to simulate real-world attack techniques, detect the
 
 ---
 
-## 🧪 Initial Setup – Sysmon Deployment & Verification
+##  Initial Setup – Sysmon Deployment & Verification
 
-### 🎯 Objective
+###  Objective
 Install Sysmon on a Windows machine and configure it to capture detailed process activity.  
 Also verify that logs are successfully sent to Microsoft Sentinel (Log Analytics Workspace).
 
 ---
 
-### ⚙️ Activity Performed
+###  Activity Performed
 - Installed Sysmon on the Windows endpoint  
 - Configured it to capture **process creation events (Event ID 1)**  
 - Verified logs were flowing into Microsoft Sentinel  
@@ -34,7 +34,7 @@ Also verify that logs are successfully sent to Microsoft Sentinel (Log Analytics
 
 ---
 
-### 🧠 Why Sysmon Was Used
+###  Why Sysmon Was Used
 Sysmon was installed because it provides more detailed visibility than normal Windows logs.
 
 It shows:
@@ -44,7 +44,7 @@ It shows:
 
 ---
 
-### 🔍 Importance for Detection & Investigation
+###  Importance for Detection & Investigation
 
 Without Sysmon:
 - You only know that a file was opened or executed  
@@ -58,7 +58,7 @@ This makes it much easier to investigate suspicious or malicious activity.
 
 ---
 
-### 🚀 Outcome
+###  Outcome
 Sysmon provided the visibility needed to:
 - Detect suspicious process execution  
 - Investigate LOLBins abuse  
@@ -66,7 +66,7 @@ Sysmon provided the visibility needed to:
 
 ---
 
-## 🧰 Tools Used
+##  Tools Used
 - Microsoft Sentinel  
 - Sysmon  
 - KQL (Kusto Query Language)  
@@ -74,7 +74,7 @@ Sysmon provided the visibility needed to:
 
 ---
 
-## ⚔️ Attack Simulations
+##  Attack Simulations
 
 ### 1. MSHTA – VBScript Execution
 - Abuse of `mshta.exe` to execute VBScript  
@@ -100,7 +100,7 @@ Sysmon provided the visibility needed to:
 
 ---
 
-## 🔍 Detection Approach
+##  Detection Approach
 Detection was performed using **KQL queries on Sysmon logs**, focusing on:
 
 - Suspicious process execution  
@@ -114,7 +114,7 @@ Each use case includes:
 
 ---
 
-## 🔄 SOC Workflow Applied
+##  SOC Workflow Applied
 Each scenario follows a real SOC workflow:
 
 1. Detection  
@@ -127,7 +127,7 @@ Each scenario follows a real SOC workflow:
 
 ---
 
-## 🎯 MITRE ATT&CK Mapping
+##  MITRE ATT&CK Mapping
 
 | Technique | Description |
 |----------|------------|
@@ -137,7 +137,7 @@ Each scenario follows a real SOC workflow:
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 PROJECT-4-lolbins-process-detection/
@@ -154,7 +154,7 @@ PROJECT-4-lolbins-process-detection/
 
 ---
 
-## 🚀 Key Takeaways
+##  Key Takeaways
 - Attackers abuse legitimate tools to evade detection  
 - Command-line analysis is critical for detection  
 - Sysmon provides deep visibility into system activity  
@@ -162,7 +162,7 @@ PROJECT-4-lolbins-process-detection/
 
 ---
 
-## 📌 Status
+##  Status
 - MSHTA Detection ✅  
 - PowerShell Detection ✅  
 - Certutil Simulation ✅  
