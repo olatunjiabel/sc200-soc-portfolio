@@ -1,4 +1,4 @@
-# 🛡️ Email Phishing Detection & Investigation Using Microsoft Defender for Office 365
+#  Email Phishing Detection & Investigation Using Microsoft Defender for Office 365
 
 ![Microsoft Defender](https://img.shields.io/badge/Microsoft%20Defender-Office%20365%20Plan%202-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge)
@@ -92,7 +92,7 @@ The email contained **3 URLs**, but no threats were identified because the email
 - **DKIM** – The email was digitally signed by the sending domain.
 - **Attachments** – None.
 
-### ⚠️ Analyst Observation
+###  Analyst Observation
 
 As a SOC Analyst, emails passing SPF, DKIM, and DMARC do not automatically guarantee legitimacy.
 
