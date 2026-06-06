@@ -1,6 +1,6 @@
-# 🛡️ Microsoft Sentinel SOC Lab – Security Operations Portfolio
+#  Microsoft Sentinel SOC Lab – Security Operations Portfolio
 
-## 🧑‍💻 About Me
+##  About Me
 
 Hi, my name is **Olatunji Olubi Abel**.
 
@@ -10,18 +10,18 @@ It documents my journey toward becoming a **SOC Analyst**, with a strong focus o
 
 ---
 
-## 🎯 Skills Demonstrated
+##  Skills Demonstrated
 
-- 🔍 Security Monitoring  
-- 🛠️ Detection Engineering  
-- 🚨 Security Incident Investigation  
-- 🧠 Threat Analysis  
-- 📊 Log Analysis  
-- ☁️ Microsoft Security Tools  
+-  Security Monitoring  
+-  Detection Engineering  
+-  Security Incident Investigation  
+-  Threat Analysis  
+-  Log Analysis  
+-  Microsoft Security Tools  
 
 ---
 
-## 🛠️ Tools & Technologies
+##  Tools & Technologies
 
 - **Microsoft Sentinel** (SIEM)  
 - **KQL (Kusto Query Language)**  
@@ -35,7 +35,7 @@ It documents my journey toward becoming a **SOC Analyst**, with a strong focus o
 - **Microsoft defender XDR**
 ---
 
-## 📂 Portfolio Projects
+##  Portfolio Projects
 
 ### 🔹 Project 0: SOC Environment Setup
 
@@ -174,7 +174,7 @@ This project focuses on detecting and investigating malicious activity involving
 
 ---
 
-### 🧪 What I Did:
+###  What I Did:
 - Simulated abuse of **CertUtil.exe** for malicious purposes (download, encode, decode operations)  
 - Investigated execution of suspicious file named **“ceprolad”** in command-line activity  
 - Generated Windows Security and Sysmon logs (Process Creation events)  
@@ -184,7 +184,7 @@ This project focuses on detecting and investigating malicious activity involving
 
 ---
 
-### 🎯 Detection Logic Focus:
+###  Detection Logic Focus:
 - CertUtil usage with suspicious flags:
   - `-urlcache`
   - `-encode`
@@ -196,7 +196,7 @@ This project focuses on detecting and investigating malicious activity involving
 
 ---
 
-### 🔍 Key Findings:
+###  Key Findings:
 - CertUtil was used as a LOLBin to simulate file retrieval and encoding abuse  
 - Suspicious execution of **ceprolad** identified as potentially malicious or staged payload  
 - Encoded command-line activity made direct interpretation difficult  
@@ -205,7 +205,7 @@ This project focuses on detecting and investigating malicious activity involving
 
 ---
 
-### 📊 Outcome:
+###  Outcome:
 - Successfully detected CertUtil LOLBin abuse using KQL  
 - Identified suspicious execution behavior tied to unknown file activity (ceprolad)  
 - Improved ability to detect encoded and obfuscated command execution  
@@ -213,7 +213,7 @@ This project focuses on detecting and investigating malicious activity involving
 
 ---
 
-**Status:** ✅ Completed  
+**Status:**  Completed  
 
 👉 [View Project Details](PROJECT-5-certutil-lolbin-ceprolad-investigation/README.md)
 
@@ -292,7 +292,7 @@ The objective was to understand how phishing emails are delivered, how users int
 
 👉 [View Project Details](PROJECT-7-Email%20phishing%20detection%20and%20investigation%20using%20microsoft%20defender%20for%20office%20365/README.md)
 
-## 🚀 Key Achievements
+##  Key Achievements
 
 - Built a functional SOC lab environment from scratch  
 - Simulated and detected real-world attack scenarios  
@@ -305,7 +305,7 @@ The objective was to understand how phishing emails are delivered, how users int
 - Performed email authentication analysis (SPF, DKIM, DMARC)
 - Validated sender IP reputation using VirusTotal
 
-## 📊 Attack Patterns Detected
+##  Attack Patterns Detected
 
 | Attack Type               | Project   | Status       |
 |--------------------------|----------|-------------|
@@ -321,7 +321,7 @@ The objective was to understand how phishing emails are delivered, how users int
 
 ---
 
-## 🎓 SC-200 Alignment
+##  SC-200 Alignment
 
 This portfolio demonstrates hands-on experience with:
 
@@ -342,7 +342,7 @@ This portfolio demonstrates hands-on experience with:
   
 ---
 
-## 📈 Career Goal
+##  Career Goal
 
 To become a **SOC Analyst / Security Operations Engineer**, specializing in:
 
@@ -354,7 +354,7 @@ To become a **SOC Analyst / Security Operations Engineer**, specializing in:
 
 ---
 
-## 📌 How To Use This Portfolio
+##  How To Use This Portfolio
 
 **For learners:**
 - Start with **Project 0** (environment setup)  
@@ -386,7 +386,7 @@ To become a **SOC Analyst / Security Operations Engineer**, specializing in:
 - **Location:** Nigeria  
 - **GitHub:** https://github.com/olatunjiabel231-coder/sc200-soc-portfolio
 ---
-## 📋 Quick Navigation
+##  Quick Navigation
 
 1. [Project 0: SOC Environment Setup](#project-0)
 2. [Project 1: Azure AD Brute Force Detection](#project-1)
