@@ -1,6 +1,6 @@
 # Certutil Encoded Execution (LOLBIN Abuse)
 
-## 📌 Attack Simulation
+##  Attack Simulation
 
 Certutil is one of Windows Process used basically for Manual verification of Digital certificate, it can be used to execute commands too and also download files.
 
@@ -11,13 +11,13 @@ I simulated a Certutil LOLBIN attack using Powershell to run the Certutil encode
 ---
 
 
-## 📊 Log Source
+##  Log Source
 
 * Sysmon (Event ID 1 – Process Creation)
 
 ---
 
-## 🔍 Detection (KQL Query)
+##  Detection (KQL Query)
 
 ```kql
 Event
@@ -35,13 +35,13 @@ Event
 ---
 
 
-### 📸 Detection Result
+###  Detection Result
 
 ![Certutil KQL Detection](../screenshots/certutil-kql-detection.png)
 
 ---
 
-## 🧠 Investigation
+##  Investigation
 
 The question is what is suspicious about Certutil running an encoded command right?
 
@@ -57,13 +57,13 @@ In cases like this investigation must be done thoroughly, Parent Image and Image
 
 ---
 
-### 📸 Process Execution Evidence (Parent-Child Relationship)
+###  Process Execution Evidence (Parent-Child Relationship)
 ![Certutil CommandLine](../screenshots/certutil-commandline.png)
 
 
 ---
 
-## ⚙️ Analytics Rule Creation (Automated Detection)
+##  Analytics Rule Creation (Automated Detection)
 
 As a SOC analyst, sometimes we need automated threat detection. This can be done in an Azure environment using Azure Analytics Rules and KQL to write queries that automatically detect threats.
 
@@ -83,7 +83,7 @@ I correlated all alerts within a 30-minute window into one incident. The query r
 
 Then I created the rule and simulated the attack in PowerShell using certutil to encode a file, which successfully generated an alert and incident.
 
-## 🔍 Certutil-Automated-Detection (KQL Query)
+##  Certutil-Automated-Detection (KQL Query)
 
 ```kql
 Event
@@ -101,7 +101,7 @@ Event
 | order by Lastseen desc
 ```
 
-### 📸 Analytics Rule Configuration
+###  Analytics Rule Configuration
 
 #### Entity Mapping
 ![Entity Mapping](../screenshots/certutil-entity-mapping.png)
@@ -129,7 +129,7 @@ The incident graph and attack story provided visibility into the affected host a
 ---
 
 
-## 🔄 SOC Workflow
+##  SOC Workflow
 
 When stuffs like this happen in a SOC Environment, it's triage first which is verifying the Alert, then investigate by using the SIEM tool like Microsoft Sentinel to see what has been done.
 
@@ -154,7 +154,7 @@ When stuffs like this happen in a SOC Environment, it's triage first which is ve
 
 ---
 
-## 🚨 Response Actions
+##  Response Actions
 
 * Device isolation
 * Process termination
@@ -163,7 +163,7 @@ When stuffs like this happen in a SOC Environment, it's triage first which is ve
 
 ---
 
-## 🎯 MITRE ATT&CK Mapping
+##  MITRE ATT&CK Mapping
 
 * Technique: **T1140 – Deobfuscate/Decode Files or Information**
 * Technique: **T1105 – Ingress Tool Transfer**
