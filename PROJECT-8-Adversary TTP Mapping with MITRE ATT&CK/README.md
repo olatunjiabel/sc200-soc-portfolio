@@ -290,7 +290,7 @@ coverage with a written KQL detection rule.
 
 ![ATT&CK Navigator Heatmap](screenshots/att&ck-navigator-heatmap.png)
 
-[Download Navigator Layer File](./attck-layer.json)
+[Download Navigator Layer File](Navigator/att&ck-layer.json)
 
 ---
 
