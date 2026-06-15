@@ -288,7 +288,7 @@ The following heatmap shows all techniques mapped across the
 three findings in this project. Green indicates full detection 
 coverage with a written KQL detection rule.
 
-![ATT&CK Navigator Heatmap](./att&ck-navigator-heatmap.png)
+![ATT&CK Navigator Heatmap](screenshots/att&ck-navigator-heatmap.png)
 
 [Download Navigator Layer File](./attck-layer.json)
 
