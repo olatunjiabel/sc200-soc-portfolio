@@ -1,4 +1,4 @@
-# Project 9: Adversary TTP Mapping with MITRE ATT&CK
+# Project 8: Adversary TTP Mapping with MITRE ATT&CK
 ## Detection Engineering Project
 
 ## Introduction
