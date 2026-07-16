@@ -94,7 +94,7 @@ All alerts was related to the same endpoint and was carried out by the same user
 ![Eicar Quarantine](screenshots/eicar-file-quarantined.png)
 
 **Advanced Hunting query showing the full July 12 command sequence (whoami, net user, tasklist, ipconfig, net user backdoor, net localgroup):**
-![Advanced Hunting Command Sequence](screenshots/Commandlines-run-by-admin_.png)
+![Advanced Hunting Command Sequence](screenshots/Command-lines-run-by-admin.png)
 
 **Backdoor account creation — net.exe (PID 14096), 9:49:34/35 AM:**
 ![Backdoor Account Creation](screenshots/Backdoor-account-creation.png)
