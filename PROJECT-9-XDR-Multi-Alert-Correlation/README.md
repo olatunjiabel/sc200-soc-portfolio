@@ -256,37 +256,72 @@ Continuous monitoring would be maintained to detect any attempt by the attacker 
 ### 7. Escalation and Documentation
 
 The incident would be escalated to the appropriate IT and Security Operations teams, with full documentation of findings, timeline, and remediation steps provided for record-keeping and post-incident review.
+# Blast Radius Investigation
 
-## Blast Rdaius Investigation 
+## Objective
+In regards to this Project I wrote a KQL to investigate the blast radius.
 
-In regards to this Project I wrote a KQL to investigate the blast radius. 
 To answer:
+- Did any of the two Compromised users access other endpoints in the network aside the compromised device within that time range
+- Did any of the Compromised user run enumeration commands on other endpoints in that time frame
+- Did any of the Two Users logon to any other device within that time frame
 
-- Did any of the two Compromised users 
-  Access other endpoints in the network 
-  Aside the compromised device within that 
-  Time Range and Did any of the Compromised user run the 
-  enumeration commands on other endpoints 
-  in that Time frame.
+---
 
-  
-  
-- Did any of the Two Users logon 
-  to any other device within that time frame.
-  I wrote a KQL to check logon events.
+## KQL Queries
+
+### 1. Enumeration Commands Check
+```kql
+DeviceProcessEvents
+| where TimeGenerated between (datetime(2026-07-10) .. datetime(2026-07-12 23:59:59))
+| where AccountName in~ ("Administrator", "Backdoor")
+| where ProcessCommandLine has_any (
+    "whoami",
+    "net user",
+    "tasklist",
+    "ipconfig",
+    "certutil",
+    "localgroup administrators",
+    "urlcache"
+)
+| project
+    TimeGenerated,
+    DeviceName,
+    AccountName,
+    FileName,
+    ProcessCommandLine,
+    InitiatingProcessFileName,
+    InitiatingProcessCommandLine
+| order by TimeGenerated desc
+```
 
 
+
+### 2. Logon Check
+```kql
+DeviceLogonEvents
+| where TimeGenerated between (datetime(2026-07-10) .. datetime(2026-07-12 23:59:59))
+| where AccountName in~ ("Administrator", "Backdoor")
+| project
+    TimeGenerated,
+    DeviceName,
+    AccountName,
+    LogonType,
+    ActionType,
+    RemoteIP
+| order by TimeGenerated desc
+```
 
 ### KQL Results
 The KQL Results showed the 
 Compromised user "Administrator" only 
 Accessed one device which is the Compromi
-sed Device. The "Backdoor" User Created 
+sed Device. The "Backdoor" User Created, 
 Could not be found logging to other 
 endpoints or running any activity on 
 other endpoint within that time frame 
 as well.
 
----
+
 
 
