@@ -265,15 +265,16 @@ To answer:
 - Did any of the two Compromised users 
   Access other endpoints in the network 
   Aside the compromised device within that 
-  Time Range.
+  Time Range and Did any of the Compromised user run the 
+  enumeration commands on other endpoints 
+  in that Time frame.
+
+  
   
 - Did any of the Two Users logon 
   to any other device within that time frame.
   I wrote a KQL to check logon events.
 
-- Did any of the Compromised user run the 
-  enumeration commands on other endpoints 
-  in that Time frame.
 
 
 ### KQL Results
