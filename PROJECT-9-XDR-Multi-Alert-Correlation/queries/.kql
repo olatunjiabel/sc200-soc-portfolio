@@ -1,1 +1,21 @@
-
+DeviceProcessEvents
+| where TimeGenerated >= ago(5d)
+| where AccountName in~ ("Administrator", "Backdoor")
+| where ProcessCommandLine has_any (
+    "whoami",
+    "net user",
+    "tasklist",
+    "ipconfig",
+    "Eicar",
+    "localgroup administrators",
+    "urlcache"
+)
+| project
+    TimeGenerated,
+    DeviceName,
+    AccountName,
+    FileName,
+    ProcessCommandLine,
+    InitiatingProcessFileName,
+    InitiatingProcessCommandLine
+| order by TimeGenerated desc
