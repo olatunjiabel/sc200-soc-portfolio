@@ -256,21 +256,25 @@ Continuous monitoring would be maintained to detect any attempt by the attacker 
 ### 7. Escalation and Documentation
 
 The incident would be escalated to the appropriate IT and Security Operations teams, with full documentation of findings, timeline, and remediation steps provided for record-keeping and post-incident review.
+
 # Blast Radius Investigation
 
 ## Objective
-In regards to this Project I wrote a KQL to investigate the blast radius.
 
-To answer:
-- Did any of the two Compromised users access other endpoints in the network aside the compromised device within that time range
-- Did any of the Compromised user run enumeration commands on other endpoints in that time frame
-- Did any of the Two Users logon to any other device within that time frame
+The objective of this investigation was to determine the scope of compromise and identify whether the compromised Administrator account or the attacker-created Backdoor account accessed additional resources within the environment.
+
+The investigation aimed to answer the following questions:
+
+- Did the compromised Administrator account or attacker-created Backdoor account access other endpoints within the network during the incident timeframe?
+- Did either account execute enumeration commands on other endpoints during the investigation period?
+- Did either account authenticate to any additional devices outside the compromised endpoint?
 
 ---
 
 ## KQL Queries
 
 ### 1. Enumeration Commands Check
+
 ```kql
 DeviceProcessEvents
 | where TimeGenerated between (datetime(2026-07-10) .. datetime(2026-07-12 23:59:59))
@@ -294,11 +298,9 @@ DeviceProcessEvents
     InitiatingProcessCommandLine
 | order by TimeGenerated desc
 ```
-
-
-
 ### 2. Logon Check
 ```kql
+### 2. Logon Check
 DeviceLogonEvents
 | where TimeGenerated between (datetime(2026-07-10) .. datetime(2026-07-12 23:59:59))
 | where AccountName in~ ("Administrator", "Backdoor")
@@ -310,17 +312,6 @@ DeviceLogonEvents
     ActionType,
     RemoteIP
 | order by TimeGenerated desc
-```
-
-### KQL Results
-The KQL Results showed the 
-Compromised user "Administrator" only 
-Accessed one device which is the Compromi
-sed Device. The "Backdoor" User Created, 
-Could not be found logging to other 
-endpoints or running any activity on 
-other endpoint within that time frame 
-as well.
 
 
 
