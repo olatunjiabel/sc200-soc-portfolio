@@ -13,7 +13,7 @@
 | **Incident ID** | 204 |
 | **Severity** | High |
 | **Status** | Active |
-| **Verdict** | True Positive — Authorized Security Simulation |
+| **Verdict** | True Positive Benign — Authorized Security Simulation |
 | **Total Alerts** | 16 |
 | **Indicator of Compromise** | Backdoor local account created and escalated to local Administrators group via net.exe; eicar.com file created at C:\Temp\eicar.com via powershell.exe |
 | **Indicator of Attack** | LOLBin abuse via certutil.exe (-urlcache -split -f) to download eicar.txt on July 10, followed by a reconnaissance-to-persistence sequence (whoami, net user enumeration, tasklist, ipconfig, backdoor account creation and privilege escalation) on July 12 |
