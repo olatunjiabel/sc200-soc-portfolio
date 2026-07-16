@@ -1,12 +1,12 @@
 DeviceProcessEvents
-| where TimeGenerated >= ago(5d)
+| where TimeGenerated between (datetime(2026-07-10) .. datetime(2026-07-12 23:59:59))
 | where AccountName in~ ("Administrator", "Backdoor")
 | where ProcessCommandLine has_any (
     "whoami",
     "net user",
     "tasklist",
     "ipconfig",
-    "Eicar",
+    "certutil",
     "localgroup administrators",
     "urlcache"
 )
