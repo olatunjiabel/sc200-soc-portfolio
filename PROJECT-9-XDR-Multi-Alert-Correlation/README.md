@@ -44,19 +44,19 @@ The alert story gave one very important detail to take note of: this attack star
 
 The first alert under the attack story tab showed that MDE prevented the execution of a Trojan on the endpoint in a commandline ran by the Admin. This happened at 12:58pm.
 
-On that same day, on that particular endpoint, within the same timeline "1pm" — PowerShell was used to create a file named eicar.com, file size 68 B. The eicar file was quarantined immediately as it displays the behaviour of a virus.
+On that same day, on that particular endpoint, within the same timeline "1pm", PowerShell was used to create a file named eicar.com, file size 68 B. The eicar file was quarantined immediately as it displays the behaviour of a virus.
 
-On July 12, 2 days after — a commandline was run by Admin: "whoami.exe" on the same endpoint device from July 10th, 2026. Tasklist.exe was ran as well, and ipconfig.exe subsequently.
+On July 12, 2 days after - a commandline was run by Admin: "whoami.exe" on the same endpoint device from July 10th, 2026. Tasklist.exe was ran as well, and ipconfig.exe subsequently.
 
-This series of commands on the endpoint is not suspicious on its own — but what happened immediately after flagged it very suspicious, as net.exe was used to create a backdoor in commandline.
+This series of commands on the endpoint is not suspicious on its own but what happened immediately after flagged it very suspicious, as net.exe was used to create a backdoor in commandline.
 
-So this validates why the earlier commands were ran. Attackers love using legitimate commandline tools. The tasklist.exe when ran will show all running processes. Adversaries can run this sometimes to know the process running on the device at that moment, and see if any process can hinder whatever they want to achieve on the endpoint — then they will terminate it.
+So this validates why the earlier commands were ran. Attackers love using legitimate commandline tools. The tasklist.exe when ran will show all running processes. Adversaries can run this sometimes to know the process running on the device at that moment, and see if any process can hinder whatever they want to achieve on the endpoint then they will terminate it.
 
 Net.exe when ran by adversary as well is used to gather information about the users and privileges available on that endpoint. This helps how they can move laterally.
 
-Ipconfig.exe was used to see network configuration and all running network connectivity — helping adversary see how they can connect outbound if planning a C2 Beacon Attack.
+Ipconfig.exe was used to see network configuration and all running network connectivity helping adversary see how they can connect outbound if planning a C2 Beacon Attack.
 
-It only makes sense for XDR to flag and correlate after all this commands was ran and a backdoor — which is a new user — was created on the endpoint.
+It only makes sense for XDR to flag and correlate after all this commands was ran and a backdoor  which is a new user — was created on the endpoint.
 All alerts was related to the same endpoint and was carried out by the same user hence the XDR correlation of events.
 
 ---
@@ -120,7 +120,7 @@ All alerts was related to the same endpoint and was carried out by the same user
 **Evidence and Response tab — all 5 confirmed evidence items:**
 ![Evidence and Response Overview](screenshots/Evidence-and-Response-tab-overview.png)
 
-- Local user account named "backdoor" created via net.exe — command: "net.exe" user backdoor ******** /add — executed Jul 12, 2026, 9:49:35 AM
+- Local user account named "backdoor" created via net.exe  command: "net.exe" user backdoor ******** /add — executed Jul 12, 2026, 9:49:35 AM
 - Backdoor account escalated to local Administrators group via net.exe — command: "net.exe" localgroup administrators backdoor /add — executed Jul 12, 2026, 9:49:44 AM (9 seconds after account creation)
 - eicar.com file (68 B) created via powershell.exe (PID 2380) at C:\Temp\eicar.com — Jul 10, 2026, 1:00:36 PM — SHA1: 3395856ce81f2b7382dee72602f798b642f14140 — VirusTotal detection ratio 66/68 — quarantined as Virus:DOS/EICAR_Test_File
 - Trojan:Win32/Ceprolad.A — blocked before execution via certutil.exe run under the same powershell.exe process (PID 2380), Jul 10, 2026, 12:58:49 PM
