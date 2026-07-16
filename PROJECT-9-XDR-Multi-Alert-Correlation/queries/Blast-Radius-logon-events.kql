@@ -1,1 +1,11 @@
-
+DeviceLogonEvents
+| where TimeGenerated between (datetime(2026-07-10) .. datetime(2026-07-12 23:59:59))
+| where AccountName in~ ("Administrator", "Backdoor")
+| project
+    TimeGenerated,
+    DeviceName,
+    AccountName,
+    LogonType,
+    ActionType,
+    RemoteIP
+| order by TimeGenerated desc
