@@ -256,3 +256,36 @@ Continuous monitoring would be maintained to detect any attempt by the attacker 
 ### 7. Escalation and Documentation
 
 The incident would be escalated to the appropriate IT and Security Operations teams, with full documentation of findings, timeline, and remediation steps provided for record-keeping and post-incident review.
+
+## Blast Rdaius Investigation 
+
+In regards to this Project I wrote a KQL to investigate the blast radius. 
+To answer:
+
+- Did any of the two Compromised users 
+  Access other endpoints in the network 
+  Aside the compromised device within that 
+  Time Range.
+  
+- Did any of the Two Users logon 
+  to any other device within that time frame.
+  I wrote a KQL to check logon events.
+
+- Did any of the Compromised user run the 
+  enumeration commands on other endpoints 
+  in that Time frame.
+
+
+### KQL Results
+The KQL Results showed the 
+Compromised user "Administrator" only 
+Accessed one device which is the Compromi
+sed Device. The "Backdoor" User Created 
+Could not be found logging to other 
+endpoints or running any activity on 
+other endpoint within that time frame 
+as well.
+
+---
+
+
