@@ -150,13 +150,6 @@ All alerts was related to the same endpoint and was carried out by the same user
 
 ---
 
-## Detection Strategy
-*(Not yet written — needs your input)*
-
----
-
-## Business Impact
-*(Not yet written — needs your input)*
 
 ---
 
@@ -312,7 +305,62 @@ DeviceLogonEvents
     ActionType,
     RemoteIP
 | order by TimeGenerated desc
+```
 
+## Business Impact
+
+Firstly, the **EICAR.com** file that was downloaded or created on the system is a test file that all antivirus companies agreed to always flag as a virus for simulation purposes.
+
+Although the EICAR file is harmless, if the same attack technique was used with a real malware file, it could pose a serious threat to an organization.
+
+### Asset Impact
+
+If the EICAR file was a real malware payload and **Microsoft Defender for Endpoint (MDE)** and **Microsoft Defender XDR** were not available to detect and quarantine it immediately, the malware could have successfully executed on the device.
+
+This could lead to malware infection, ransomware deployment, or other malicious activities that could continue spreading throughout the network.
+
+The reconnaissance activity performed on the device, followed by the successful creation of a **Backdoor** account and privilege escalation, already puts the device identity at risk.
+
+The immediate business impact is that if the incident is discovered before the complete takeover of the compromised identity, the affected device would need to be isolated from the network.
+
+This could cause downtime, especially if the compromised device is a critical server, which could directly affect business operations.
+
+The privilege escalation observed in this incident, where the Backdoor account was added to the **Administrators** group, puts the organization at risk because the adversary no longer operates with least-privilege access.
+
+---
+
+## Detection Strategy
+
+To detect and prevent similar attacks, organizations should:
+
+- Deploy an **Endpoint Detection and Response (EDR)** solution to detect and prevent malware execution, suspicious process activity, and attacker behavior.
+
+- Maintain an **Incident Response Team** and an **Incident Response Plan** to ensure security incidents are properly investigated, contained, and remediated.
+
+- Deploy automated **SOAR playbooks** to accelerate incident response actions such as device isolation, account disabling, and security notifications.
+
+- Conduct **Threat Hunting (Proactive Hunting)** to identify suspicious activities before they escalate into a larger security incident.
+
+- Create **Analytics Rules** and **Detection Rules** in a **SIEM** platform to detect similar attacks, known threats, and suspicious activities within the environment.
+
+## Lessons Learned
+
+- **How XDR Correlates Alerts into Incidents**  
+  I was able to study the patterns XDR looks out for when correlating multiple alerts into a single incident.  
+  In this case, the correlation was based on the same device, the same user, and related activities even after 2 days.
+
+- **Analytical Thinking**  
+  This project improved my analytical thinking. I had to think about how to connect the dots between different events and timelines to understand the full details of the incident.
+
+- **Staying Calm Under Pressure**  
+  Even though this project was a simulation, it felt real because I was initially overwhelmed by the number of alerts generated. However, I stayed calm and began the investigation by reviewing the Alert Story and timeline.
+
+- **MITRE ATT&CK Mapping**  
+  Once again, in this project, I was able to map adversary actions to the correct MITRE ATT&CK techniques and understand how attacker behavior aligns with different tactics.
+
+- **Value of EDR/XDR**  
+  This project showed me the importance of having endpoint detection and XDR correlation capabilities in a security environment.  
+  Microsoft Defender for Endpoint blocked the download attempt and quarantined the EICAR file, demonstrating the value of automated detection and response.
 
 
 
