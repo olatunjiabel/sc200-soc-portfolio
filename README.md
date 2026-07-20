@@ -239,11 +239,8 @@ SOAR (Security Orchestration and Automated Remediation) refers to the activities
 - Logic App playbook triggered automatically and sent email notification to SOC analyst Outlook mailbox
 
 **SOAR Workflow:**
-```
 Brute Force Attempt → KQL Query Detection → Analytics Rule
 → Incident Creation → Automation Rule → Logic App Workflow → Outlook Alert ✅
-```
-
 **What I Learned:**
 - To enable SOAR and to be able to add automation rules to my Analytic rule, I was prompted to assign the role of Sentinel Automation Contributor to Azure Security Insights in IAM (Identity Access Management)
 - The license for Defender for Office 365 Plan 2 E5 is needed or Business Premium License to be able to use the Outlook connector in the Logic App
@@ -292,6 +289,65 @@ The objective was to understand how phishing emails are delivered, how users int
 
 👉 [View Project Details](PROJECT-7-Email%20phishing%20detection%20and%20investigation%20using%20microsoft%20defender%20for%20office%20365/README.md)
 
+### 🔹 Project 8: Adversary TTP Mapping with MITRE ATT&CK
+
+This project focuses on mapping adversary tactics and techniques observed across earlier investigations to the MITRE ATT&CK framework, showing the analyst reasoning behind each mapping and how that mapping drives detection strategy.
+
+**What I Did:**
+
+* Mapped three real findings from my Azure lab environment to MITRE ATT&CK tactics and techniques (Azure AD brute force, RDP brute force, and LOLBin/Certutil abuse)
+* Documented my analyst reasoning for navigating attack.mitre.org and arriving at each tactic and technique
+* Built a detection strategy and KQL detection rule for each mapped technique
+* Correlated DeviceProcessEvents and DeviceNetworkEvents to check for C2 beacon activity
+* Built an ATT&CK Navigator heatmap and coverage summary across all findings
+
+**Key Findings:**
+
+* Azure AD brute force mapped to T1110.001 – Password Guessing (Credential Access)
+* RDP brute force mapped to the same technique, T1110.001, but required a different data source (Windows Security Event Logs instead of Azure AD Sign-in Logs) — demonstrating that the same technique can require different detection coverage depending on protocol
+* LOLBin abuse (PowerShell spawning Certutil) mapped to three separate techniques across three tactics: T1059.001 (Execution), T1140 (Defense Evasion), and T1105 (Command and Control)
+* 5 techniques mapped in total, with full detection coverage (0 gaps) across all findings
+
+**What I Learned:**
+
+* MITRE ATT&CK mapping is not just documentation — it directly determines what to monitor and why
+* The same adversary technique can manifest differently across data sources and protocols, requiring broader detection coverage than a single query
+* Correlating process and network events together is necessary to answer questions like "is this a C2 beacon attack?"
+
+**Status:** ✅ Completed
+
+👉 [View Project Details](PROJECT-8-Adversary%20TTP%20Mapping%20with%20MITRE%20ATT%26CK/README.md)
+
+### 🔹 Project 9: XDR Multi-Alert Correlation Investigation
+
+This project investigates a full hands-on-keyboard incident in which Microsoft Defender XDR correlated 16 separate alerts, generated across a two-day window on the same endpoint and identity, into a single incident.
+
+**What I Did:**
+
+* Investigated an incident where a compromised Administrator account was used to run a LOLBin (Certutil) download attempt, followed two days later by a reconnaissance-to-persistence attack chain
+* Used the Attack Story, Incident Graph, and Evidence and Response tabs in Microsoft Defender XDR to reconstruct the full timeline
+* Wrote and ran Advanced Hunting KQL queries across DeviceProcessEvents, DeviceFileEvents, and DeviceLogonEvents to confirm every claim against raw telemetry
+* Separated findings into Indicators of Attack (behavior-based) and Indicators of Compromise (artifact-based)
+* Mapped the full attack chain to MITRE ATT&CK, built an Incident Response Procedure (7 phases), a Business Impact assessment, and a Detection Strategy
+* Wrote my own Blast Radius KQL queries to check whether the compromised account or the attacker-created account touched any other device in the environment
+
+**Key Findings:**
+
+* Attack began with Certutil (`-urlcache -split -f`) invoked via PowerShell to download a file from an external URL — blocked as Trojan:Win32/Ceprolad.A
+* Two days later, the same compromised account ran a tight reconnaissance sequence (whoami, net user enumeration, tasklist, ipconfig) followed by creation of a local "backdoor" account and its escalation into the local Administrators group — all within roughly 45 seconds
+* XDR correlated all 16 alerts into a single incident based on shared device and shared identity, despite the 2-day gap between the two stages of the attack
+* Multiple individually-flagged alerts (account creation, password change, group modification) were confirmed to trace back to the same single net.exe command, not separate events
+
+**What I Learned:**
+
+* How XDR actually correlates alerts into incidents — by device and identity, not just time proximity
+* The value of verifying every claim against raw Advanced Hunting telemetry rather than trusting an alert summary — this process caught and corrected several of my own early assumptions during the investigation
+* How to stay methodical rather than overwhelmed when a single incident contains 16 alerts
+
+**Status:** ✅ Completed
+
+👉 [View Project Details](PROJECT-9-XDR-Multi-Alert-Correlation/README.md)
+
 ##  Key Achievements
 
 - Built a functional SOC lab environment from scratch  
@@ -304,6 +360,8 @@ The objective was to understand how phishing emails are delivered, how users int
 - - Investigated phishing emails using Microsoft Defender for Office 365
 - Performed email authentication analysis (SPF, DKIM, DMARC)
 - Validated sender IP reputation using VirusTotal
+- Mapped adversary tactics and techniques to MITRE ATT&CK with full documented analyst reasoning
+- Investigated a 16-alert multi-stage XDR-correlated incident from initial access through privilege escalation
 
 ##  Attack Patterns Detected
 
@@ -316,6 +374,8 @@ The objective was to understand how phishing emails are delivered, how users int
 | Lolbin Investigation     | Project 5 | ✅ Complete |
 | SOAR Automated Response  | Project 6 | ✅ Complete |
 | Email Phishing Investigation | Project 7 | ✅ Complete |
+| MITRE ATT&CK TTP Mapping | Project 8 | ✅ Complete |
+| XDR Multi-Alert Correlated Incident | Project 9 | ✅ Complete |
 ---
 
 
@@ -339,6 +399,11 @@ This portfolio demonstrates hands-on experience with:
 - Reviewed sender IP addresses and URL activity
 - Used Threat Explorer to investigate phishing events
 - Performed external threat intelligence validation with VirusTotal
+- Mapped adversary behavior to MITRE ATT&CK tactics and techniques
+- Built and used an ATT&CK Navigator heatmap for coverage tracking
+- Investigated and correlated a multi-alert incident using Microsoft Defender XDR
+- Verified findings against raw telemetry using Advanced Hunting across multiple device tables
+- Built a full Incident Response Procedure and Business Impact assessment
   
 ---
 
@@ -366,9 +431,13 @@ To become a **SOC Analyst / Security Operations Engineer**, specializing in:
 - Review **Project 5** (CertUtil LOLBin & Ceprolad Investigation)
 - Review **Project 6** (SOAR automated response pipeline)
 - Review **Project 7** (PROJECT 7: Email phishing detection and investigation using microsoft defender  for office 365)
+- Review **Project 8** (Adversary TTP Mapping with MITRE ATT&CK)
+- Review **Project 9** (XDR Multi-Alert Correlation Investigation)
   
 **For Recruiters:**
 
+* Project 9 demonstrates full incident investigation using Microsoft Defender XDR — correlating 16 alerts into one incident, verifying every claim against raw Advanced Hunting telemetry, and producing a complete IOA/IOC breakdown, MITRE mapping, Incident Response Procedure, and Business Impact assessment.
+* Project 8 demonstrates MITRE ATT&CK mapping with documented analyst reasoning across three real findings, tied directly to detection rules and an ATT&CK Navigator heatmap.
 * Project 7 demonstrates hands-on phishing detection and investigation using Microsoft Defender for Office 365, including Attack Simulation Training, Threat Explorer, email authentication analysis (SPF, DKIM, DMARC), URL investigation, and IP reputation validation.
 * Project 6 demonstrates end-to-end SOAR automation from detection to analyst notification using Microsoft Sentinel and Logic Apps.
 * Project 5 demonstrates step-by-step LOLBin and malware investigation using CertUtil abuse, process analysis, and KQL-based detection.
@@ -396,6 +465,8 @@ To become a **SOC Analyst / Security Operations Engineer**, specializing in:
 6. [Project 5: CertUtil & Malware Investigation](#project-5)
 7. [Project 6: SOAR Automated Response](#project-6)
 8. [PROJECT 7: Email phishing detection and investigation using microsoft defender  for office 365](#project-7)
+9. [Project 8: Adversary TTP Mapping with MITRE ATT&CK](#project-8)
+10. [Project 9: XDR Multi-Alert Correlation Investigation](#project-9)
 
 ## ⚠️ Disclaimer
 
