@@ -10,7 +10,7 @@ This step extends the SOC lab by integrating a locally hosted server with Azure 
 
 This onboarding process builds on the SOC infrastructure created in **Project 0**.
 
-➡️ Return to the main project documentation:  
+ Return to the main project documentation:  
 [Project 0 – SOC Environment Setup](../README.md)
 
 Project 0 established the following components:
