@@ -88,4 +88,4 @@ This taught me that not every alert needs to be escalated. Understanding  what t
 - `/attack-simulation` — Simulation steps
 - `/investigation` — Full investigation findings and triage details
 
-👉 [View Full Investigation Details](investigation/findings.md)
+ [View Full Investigation Details](investigation/findings.md)
