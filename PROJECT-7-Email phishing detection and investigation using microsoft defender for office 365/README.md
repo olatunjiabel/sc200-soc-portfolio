@@ -79,9 +79,9 @@ The email contained **3 URLs**, but no threats were identified because the email
 
 | Protocol | Result |
 |----------|--------|
-| DMARC | ✅ Pass |
-| DKIM | ✅ Pass |
-| SPF | ✅ Pass |
+| DMARC |  Pass |
+| DKIM |  Pass |
+| SPF |  Pass |
 
 ![Authentication Results](screenshots/Authentication-results.png)
 
