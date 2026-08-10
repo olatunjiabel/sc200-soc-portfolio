@@ -37,7 +37,7 @@ It documents my journey toward becoming a **SOC Analyst**, with a strong focus o
 
 ##  Portfolio Projects
 
-### 🔹 Project 0: SOC Environment Setup
+###  Project 0: SOC Environment Setup
 
 Foundational project where I built a complete SOC lab environment from scratch.
 
