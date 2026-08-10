@@ -80,7 +80,7 @@ Sysmon provided the visibility needed to:
 - Abuse of `mshta.exe` to execute VBScript  
 - Demonstrates fileless script execution  
 
-➡️ [View Use Case](use-cases/mshta-vbscript-execution/README.md)
+ [View Use Case](use-cases/mshta-vbscript-execution/README.md)
 
 ---
 
@@ -88,7 +88,7 @@ Sysmon provided the visibility needed to:
 - Use of `powershell.exe` with encoded commands  
 - Common attacker technique for obfuscation  
 
-➡️ [View Use Case](use-cases/powershell-encoded-command/README.md)
+ [View Use Case](use-cases/powershell-encoded-command/README.md)
 
 ---
 
@@ -96,7 +96,7 @@ Sysmon provided the visibility needed to:
 - Abuse of `certutil.exe` to download or decode payloads  
 - Often used by attackers for file transfer and evasion  
 
-➡️ [View Use Case](use-cases/certutil-encoded-command/README.md)
+ [View Use Case](use-cases/certutil-encoded-command/README.md)
 
 ---
 
@@ -163,9 +163,9 @@ PROJECT-4-lolbins-process-detection/
 ---
 
 ##  Status
-- MSHTA Detection ✅  
-- PowerShell Detection ✅  
-- Certutil Simulation ✅  
+- MSHTA Detection : Completed
+- PowerShell Detection : Completed   
+- Certutil Simulation  : Completed
 
 ---
 
