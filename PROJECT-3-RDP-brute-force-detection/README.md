@@ -47,7 +47,7 @@ This setup allows logs from the Windows Server to be collected and analyzed insi
 
 ---
 
-## ⚔️ Attack Simulation
+##  Attack Simulation
 
 To simulate the attack:
 
@@ -71,10 +71,10 @@ During the simulation, the following logs were generated:
 
 Initially, I thought RDP would always show LogonType 10, but I later discovered that failed attempts were showing as LogonType 3 instead.
 
-### 🔹 Failed Login Attempts
+###  Failed Login Attempts
 ![Failed Logins](Screenshots/failed-logons.png)
 
-### 🔹 Successful RDP Login
+###  Successful RDP Login
 ![Successful Login](Screenshots/successful-rdp-logon.png)
 
 ---
@@ -110,7 +110,7 @@ SecurityEvent
 | sort by FailedAttempts desc
 ```
 
-### 🔹 Detection Result
+###  Detection Result
 ![Detection Result](Screenshots/bruteforce-detection-success.png)
 
 ---
@@ -119,7 +119,7 @@ SecurityEvent
 
 The detection query was used to create a scheduled analytics rule in Microsoft Sentinel.
 
-### 🔹 Rule Configuration
+###  Rule Configuration
 ![Analytics Rule](Screenshots/analytics-rule-config.png)
 
 ---
@@ -128,7 +128,7 @@ The detection query was used to create a scheduled analytics rule in Microsoft S
 
 Once the rule was triggered, Microsoft Sentinel generated an incident.
 
-### 🔹 Incident Created
+###  Incident Created
 ![Incident](Screenshots/incident-created.png)
 
 ---
@@ -137,7 +137,7 @@ Once the rule was triggered, Microsoft Sentinel generated an incident.
 
 Inside the incident, I investigated the attack using the attack graph.
 
-### 🔹 Attack Graph / Entities
+###  Attack Graph / Entities
 ![Attack Graph](Screenshots/incident-attack-graph.png)
 
 From the investigation:
