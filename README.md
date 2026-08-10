@@ -240,7 +240,7 @@ SOAR (Security Orchestration and Automated Remediation) refers to the activities
 
 **SOAR Workflow:**
 Brute Force Attempt → KQL Query Detection → Analytics Rule
-→ Incident Creation → Automation Rule → Logic App Workflow → Outlook Alert ✅
+→ Incident Creation → Automation Rule → Logic App Workflow → Outlook Alert 
 **What I Learned:**
 - To enable SOAR and to be able to add automation rules to my Analytic rule, I was prompted to assign the role of Sentinel Automation Contributor to Azure Security Insights in IAM (Identity Access Management)
 - The license for Defender for Office 365 Plan 2 E5 is needed or Business Premium License to be able to use the Outlook connector in the Logic App
