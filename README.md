@@ -48,13 +48,13 @@ Foundational project where I built a complete SOC lab environment from scratch.
 - Connected Windows Server via Azure Arc  
 - Set up data ingestion pipelines  
 
-**Status:** ✅ Completed  
+**Status:**  Completed  
 
-👉 [View Project Details](PROJECT-0-soc-enviroment-setup/README.md)
+ [View Project Details](PROJECT-0-soc-enviroment-setup/README.md)
 
 ---
 
-### 🔹 Project 1: Azure AD Brute Force Detection
+###  Project 1: Azure AD Brute Force Detection
 
 Detection engineering project using cloud authentication logs.
 
@@ -69,13 +69,13 @@ Detection engineering project using cloud authentication logs.
 - Identified source IP and targeted user account  
 - Confirmed brute force attack pattern  
 
-**Status:** ✅ Completed  
+**Status:**  Completed  
 
-👉 [View Project Details](PROJECT-1-detection-engineering/README.md)
+ [View Project Details](PROJECT-1-detection-engineering/README.md)
 
 ---
 
-### 🔹 Project 2: False Positive - Brute Force Detection
+###  Project 2: False Positive - Brute Force Detection
 
 Focused on distinguishing real threats from false positives.
 
@@ -94,13 +94,13 @@ Focused on distinguishing real threats from false positives.
 - Context and investigation are critical in SOC workflows  
 - Understanding log data reduces alert fatigue  
 
-**Status:** ✅ Completed  
+**Status:**  Completed  
 
-👉 [View Project Details](PROJECT-2-brute-force-detection/README.md)
+ [View Project Details](PROJECT-2-brute-force-detection/README.md)
 
 ---
 
-### 🔹 Project 3: RDP Brute Force Detection & Investigation
+###  Project 3: RDP Brute Force Detection & Investigation
 
 Simulated a real-world attack involving multiple failed RDP logins followed by a successful compromise.
 
@@ -122,13 +122,13 @@ Simulated a real-world attack involving multiple failed RDP logins followed by a
 - Incident created and analyzed in Sentinel  
 - Full attack chain visibility achieved  
 
-**Status:** ✅ Completed  
+**Status:**  Completed  
 
-👉 [View Project Details](PROJECT-3-RDP-brute-force-detection/README.md)
+ [View Project Details](PROJECT-3-RDP-brute-force-detection/README.md)
 
 ---
 
-### 🔹 Project 4: LOLBIN Process Abuse Detection & Investigation
+###  Project 4: LOLBIN Process Abuse Detection & Investigation
 
 I simulated real-world attacks using different Windows LOLBINs (Living-off-the-Land Binaries) to execute encoded and obfuscated commands, just like how attackers try to hide their activity.
 
@@ -161,14 +161,14 @@ I simulated real-world attacks using different Windows LOLBINs (Living-off-the-L
 - Gained better visibility into encoded and obfuscated command execution  
 - Built a strong detection approach for identifying defense evasion techniques in a SOC environment
   
-**Status:** ✅ Completed  
+**Status:**  Completed  
 
-👉 [View Project Details](PROJECT-4-lolbins-process-detection)
+ [View Project Details](PROJECT-4-lolbins-process-detection)
 
 
 ---
 
-## 🔹 Project 5: CertUtil LOLBin & Ceprolad Investigation
+##  Project 5: CertUtil LOLBin & Ceprolad Investigation
 
 This project focuses on detecting and investigating malicious activity involving **CertUtil (a Windows LOLBin)** and suspicious file execution behavior, including the use of a file named **“ceprolad”**, commonly associated with obfuscated or staged malware activity.
 
@@ -215,10 +215,10 @@ This project focuses on detecting and investigating malicious activity involving
 
 **Status:**  Completed  
 
-👉 [View Project Details](PROJECT-5-certutil-lolbin-ceprolad-investigation/README.md)
+ [View Project Details](PROJECT-5-certutil-lolbin-ceprolad-investigation/README.md)
 
 
-### 🔹 Project 6: Sentinel SOAR — Brute Force Automated Response
+###  Project 6: Sentinel SOAR — Brute Force Automated Response
 
 This project sole aim is to showcase the step-by-step process of generating an automated response to alerts or incidents in Microsoft Sentinel.
 
@@ -246,10 +246,10 @@ Brute Force Attempt → KQL Query Detection → Analytics Rule
 - The license for Defender for Office 365 Plan 2 E5 is needed or Business Premium License to be able to use the Outlook connector in the Logic App
 - SOAR allows for the immediate remediation of threats — the SOC Analyst was alerted directly on Outlook to check out a potential Brute Force Attack
 
-**Status:** ✅ Completed  
-👉 [View Project Details](PROJECT-6-Sentinel-SOAR-BruteForce-Automation)
+**Status:**  Completed  
+ [View Project Details](PROJECT-6-Sentinel-SOAR-BruteForce-Automation)
 
-### 🔹 Project 7: Email Phishing Detection & Investigation
+###  Project 7: Email Phishing Detection & Investigation
 
 This project focuses on simulating and investigating a credential harvesting phishing attack using Microsoft Defender for Office 365 Plan 2.
 
@@ -285,11 +285,11 @@ The objective was to understand how phishing emails are delivered, how users int
 * Microsoft Attack Simulation Training provides a safe environment for testing phishing scenarios
 * Advanced investigations may require additional correlation using Advanced Hunting or Microsoft Sentinel
 
-**Status:** ✅ Completed
+**Status:** Completed
 
-👉 [View Project Details](PROJECT-7-Email%20phishing%20detection%20and%20investigation%20using%20microsoft%20defender%20for%20office%20365/README.md)
+ [View Project Details](PROJECT-7-Email%20phishing%20detection%20and%20investigation%20using%20microsoft%20defender%20for%20office%20365/README.md)
 
-### 🔹 Project 8: Adversary TTP Mapping with MITRE ATT&CK
+###  Project 8: Adversary TTP Mapping with MITRE ATT&CK
 
 This project focuses on mapping adversary tactics and techniques observed across earlier investigations to the MITRE ATT&CK framework, showing the analyst reasoning behind each mapping and how that mapping drives detection strategy.
 
@@ -314,11 +314,11 @@ This project focuses on mapping adversary tactics and techniques observed across
 * The same adversary technique can manifest differently across data sources and protocols, requiring broader detection coverage than a single query
 * Correlating process and network events together is necessary to answer questions like "is this a C2 beacon attack?"
 
-**Status:** ✅ Completed
+**Status:**  Completed
 
-👉 [View Project Details](PROJECT-8-Adversary%20TTP%20Mapping%20with%20MITRE%20ATT%26CK/README.md)
+ [View Project Details](PROJECT-8-Adversary%20TTP%20Mapping%20with%20MITRE%20ATT%26CK/README.md)
 
-### 🔹 Project 9: XDR Multi-Alert Correlation Investigation
+###  Project 9: XDR Multi-Alert Correlation Investigation
 
 This project investigates a full hands-on-keyboard incident in which Microsoft Defender XDR correlated 16 separate alerts, generated across a two-day window on the same endpoint and identity, into a single incident.
 
@@ -344,9 +344,9 @@ This project investigates a full hands-on-keyboard incident in which Microsoft D
 * The value of verifying every claim against raw Advanced Hunting telemetry rather than trusting an alert summary — this process caught and corrected several of my own early assumptions during the investigation
 * How to stay methodical rather than overwhelmed when a single incident contains 16 alerts
 
-**Status:** ✅ Completed
+**Status:**  Completed
 
-👉 [View Project Details](PROJECT-9-XDR-Multi-Alert-Correlation/README.md)
+ [View Project Details](PROJECT-9-XDR-Multi-Alert-Correlation/README.md)
 
 ##  Key Achievements
 
@@ -367,15 +367,15 @@ This project investigates a full hands-on-keyboard incident in which Microsoft D
 
 | Attack Type               | Project   | Status       |
 |--------------------------|----------|-------------|
-| Cloud Login Brute Force  | Project 1 | ✅ Complete |
-| Local Login Failures     | Project 2 | ✅ Complete |
-| RDP Brute Force + Success| Project 3 | ✅ Complete |
-| Suspicious Lolbin-Process| Project 4 | ✅ Complete |
-| Lolbin Investigation     | Project 5 | ✅ Complete |
-| SOAR Automated Response  | Project 6 | ✅ Complete |
-| Email Phishing Investigation | Project 7 | ✅ Complete |
-| MITRE ATT&CK TTP Mapping | Project 8 | ✅ Complete |
-| XDR Multi-Alert Correlated Incident | Project 9 | ✅ Complete |
+| Cloud Login Brute Force  | Project 1 |  Complete |
+| Local Login Failures     | Project 2 |  Complete |
+| RDP Brute Force + Success| Project 3 |  Complete |
+| Suspicious Lolbin-Process| Project 4 |  Complete |
+| Lolbin Investigation     | Project 5 |  Complete |
+| SOAR Automated Response  | Project 6 |  Complete |
+| Email Phishing Investigation | Project 7 |  Complete |
+| MITRE ATT&CK TTP Mapping | Project 8 |  Complete |
+| XDR Multi-Alert Correlated Incident | Project 9 |  Complete |
 ---
 
 
@@ -449,7 +449,7 @@ To become a **SOC Analyst / Security Operations Engineer**, specializing in:
 
 ---
 
-## 📞 Contact
+##  Contact
 - **Education:** OND in Computer-Engineering
 - **Certification:** SC-900 (Azure Fundamentals), Microsoft-Cyber-Security Analyst Certificate (Coursera)
 - **Location:** Nigeria  
@@ -468,7 +468,7 @@ To become a **SOC Analyst / Security Operations Engineer**, specializing in:
 9. [Project 8: Adversary TTP Mapping with MITRE ATT&CK](#project-8)
 10. [Project 9: XDR Multi-Alert Correlation Investigation](#project-9)
 
-## ⚠️ Disclaimer
+##  Disclaimer
 
 This portfolio is created in a controlled lab environment for learning purposes.  
 No real-world systems or organizations were affected.
@@ -476,5 +476,5 @@ No real-world systems or organizations were affected.
 ---
 
 **Last Updated:** JULY 2026
-**Status:** 🟢 Active (ongoing improvements)
+**Status:**  Active (ongoing improvements)
 
