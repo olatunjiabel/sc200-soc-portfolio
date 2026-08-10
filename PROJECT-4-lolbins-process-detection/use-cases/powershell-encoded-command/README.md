@@ -23,7 +23,7 @@ Attackers commonly use PowerShell encoding to:
 
 Detection was performed using a KQL query to identify PowerShell executing encoded commands.
 
-➡️ [View Detection Query](../queries/powershell-encoded-detection.kql)
+ [View Detection Query](../queries/powershell-encoded-detection.kql)
 
 ```kql
 Event
