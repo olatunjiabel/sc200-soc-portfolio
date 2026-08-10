@@ -20,7 +20,7 @@ In a real-world scenario, an attacker could replace this script with a malicious
 
 Detection was performed using a targeted KQL query to identify `mshta.exe` executing VBScript from Sysmon logs.
 
-➡️ [View Detection Query](../queries/mshta-vbscript-detection.kql)
+ [View Detection Query](../queries/mshta-vbscript-detection.kql)
 
 ```kql
 Event
